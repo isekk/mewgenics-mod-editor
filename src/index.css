@@ -1,0 +1,163 @@
+@import "tailwindcss";
+
+:root {
+  color-scheme: light;
+  font-family: "Segoe UI Variable", "Segoe UI", "Microsoft YaHei", system-ui, -apple-system, sans-serif;
+  --fluent-bg: radial-gradient(120% 120% at 10% 10%, #f7faff 0%, #eef4ff 45%, #e7effc 100%);
+  --fluent-surface: rgba(255, 255, 255, 0.68);
+  --fluent-surface-strong: rgba(255, 255, 255, 0.82);
+  --fluent-stroke: rgba(94, 132, 192, 0.22);
+  --fluent-stroke-strong: rgba(94, 132, 192, 0.35);
+  --fluent-shadow: 0 18px 50px rgba(32, 72, 124, 0.18);
+  --fluent-shadow-hover: 0 24px 70px rgba(32, 72, 124, 0.24);
+  --fluent-text: #1d2a42;
+  --fluent-text-muted: #5a6a85;
+  --fluent-accent: #2b6df6;
+  --fluent-accent-strong: #1f56d6;
+  --fluent-accent-soft: rgba(43, 109, 246, 0.18);
+}
+
+body {
+  margin: 0;
+  background: var(--fluent-bg);
+  color: var(--fluent-text);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.fluent-surface {
+  background: var(--fluent-surface);
+  border: 1px solid var(--fluent-stroke);
+  border-radius: 18px;
+  box-shadow: var(--fluent-shadow);
+  backdrop-filter: blur(18px);
+}
+
+.fluent-surface-strong {
+  background: var(--fluent-surface-strong);
+  border: 1px solid var(--fluent-stroke-strong);
+  border-radius: 18px;
+  box-shadow: var(--fluent-shadow);
+  backdrop-filter: blur(20px);
+}
+
+.fluent-card-hover {
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.fluent-card-hover:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--fluent-shadow-hover);
+  border-color: var(--fluent-stroke-strong);
+}
+
+.fluent-button {
+  border-radius: 12px;
+  border: 1px solid transparent;
+  background: var(--fluent-accent);
+  color: white;
+  padding: 0.55rem 1.2rem;
+  font-weight: 600;
+  box-shadow: 0 10px 24px rgba(43, 109, 246, 0.28);
+  transition: background 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.fluent-button:hover {
+  background: var(--fluent-accent-strong);
+  box-shadow: 0 16px 32px rgba(43, 109, 246, 0.32);
+  transform: translateY(-1px);
+}
+
+.fluent-button-secondary {
+  border-radius: 12px;
+  border: 1px solid var(--fluent-stroke);
+  background: rgba(255, 255, 255, 0.7);
+  color: var(--fluent-text);
+  padding: 0.55rem 1.2rem;
+  font-weight: 600;
+  box-shadow: 0 12px 22px rgba(31, 86, 214, 0.08);
+  transition: background 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease, border-color 0.2s ease;
+}
+
+.fluent-button-secondary:hover {
+  background: rgba(255, 255, 255, 0.88);
+  border-color: var(--fluent-stroke-strong);
+  transform: translateY(-1px);
+}
+
+.fluent-button-danger {
+  border-radius: 12px;
+  border: 1px solid rgba(193, 37, 60, 0.25);
+  background: rgba(255, 255, 255, 0.7);
+  color: #c1253c;
+  padding: 0.55rem 1.2rem;
+  font-weight: 600;
+  box-shadow: 0 10px 22px rgba(193, 37, 60, 0.12);
+  transition: background 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease, border-color 0.2s ease;
+}
+
+.fluent-button-danger:hover {
+  background: rgba(255, 255, 255, 0.9);
+  border-color: rgba(193, 37, 60, 0.4);
+  transform: translateY(-1px);
+}
+
+.fluent-input {
+  border-radius: 12px;
+  border: 1px solid var(--fluent-stroke);
+  background: rgba(255, 255, 255, 0.8);
+  color: var(--fluent-text);
+  padding: 0.55rem 0.9rem;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  outline: none;
+}
+
+.fluent-input:focus {
+  border-color: var(--fluent-accent);
+  box-shadow: 0 0 0 3px rgba(43, 109, 246, 0.2);
+}
+
+.fluent-label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--fluent-text-muted);
+  font-weight: 600;
+}
+
+.fluent-pill {
+  background: var(--fluent-accent-soft);
+  color: var(--fluent-accent-strong);
+  border-radius: 999px;
+  padding: 0.2rem 0.8rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+/* 统一滚动条风格（WebKit: Chromium/WebView2） */
+*::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+*::-webkit-scrollbar-track {
+  background: rgba(221, 232, 251, 0.9);
+}
+
+*::-webkit-scrollbar-thumb {
+  background: rgba(131, 165, 216, 0.8);
+  border-radius: 9999px;
+  border: 2px solid rgba(221, 232, 251, 0.6);
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background: rgba(98, 139, 206, 0.9);
+}
+
+/* Firefox（可选） */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(131, 165, 216, 0.8) rgba(221, 232, 251, 0.9);
+}

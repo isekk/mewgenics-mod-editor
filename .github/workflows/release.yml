@@ -1,0 +1,57 @@
+name: "Build Windows Release"
+
+on:
+  push:
+    tags:
+      - 'v*'
+  workflow_dispatch: # 支持手动点击按钮触发
+
+jobs:
+  publish-tauri:
+    permissions:
+      contents: write
+    runs-on: windows-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      # 1. 安装 Node.js
+      - name: setup node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      # 2. 安装 pnpm 
+      - name: install pnpm
+        uses: pnpm/action-setup@v3
+        with:
+          version: 9 # 或者使用 latest
+          run_install: false
+
+      # 3. 安装 Rust
+      - name: install Rust stable
+        uses: dtolnay/rust-toolchain@stable
+        with:
+          targets: x86_64-pc-windows-msvc
+
+      # 4. Rust 编译缓存 (大大缩短后续打包时间)
+      - name: Rust cache
+        uses: swatinem/rust-cache@v2
+        with:
+          workspaces: './src-tauri -> target'
+
+      # 5. 安装前端依赖
+      - name: install frontend dependencies
+        run: pnpm install
+
+      # 6. 核心：运行 Tauri Action
+      - name: Build and Release
+        uses: tauri-apps/tauri-action@v0
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tagName: ${{ github.ref_name }}
+          releaseName: "Mewgenics Mod Editor v__VERSION__"
+          releaseBody: "See the assets below to download the Windows installer."
+          releaseDraft: true
+          prerelease: false

@@ -1,0 +1,3154 @@
+{
+  "Uncontrollable": {
+    "title": {
+      "zh": "自动战斗",
+      "en": "Uncontrollable"
+    },
+    "desc": {
+      "zh": "使角色在战斗中自动行动，不受玩家控制。通常设置为1以启用。",
+      "en": "Makes the character act automatically in battle, without player control. Usually set to 1 to enable."
+    },
+    "type": "number",
+    "defaultValue": 1
+  },
+  "HealRandomInjury": {
+    "title": {
+      "zh": "治疗随机伤势",
+      "en": "Heal Random Injury"
+    },
+    "desc": {
+      "zh": "治疗一个随机的伤势。数值表示治疗伤势的数量。通常在战斗开始或结束时触发。",
+      "en": "Heals a random injury. The value represents the number of injuries to heal. Usually triggers at the start or end of battle."
+    },
+    "type": "number",
+    "defaultValue": 1
+  },
+  "StatusImmunity": {
+    "title": {
+      "zh": "状态免疫",
+      "en": "Status Immunity"
+    },
+    "desc": {
+      "zh": "使角色免疫指定的状态效果。可以是一个状态名称或一个状态名称的数组。参考值：Madness",
+      "note":"[Madness, PermanentMadness]",
+      "en": "Makes the character immune to the specified status effect(s). Can be a single status name or an array of status names. Seen values: 'Madness', ['Madness', 'PermanentMadness']"
+    },
+    "type": "string",
+    "defaultValue": "Madness"
+  },
+  "CollectPickupsOnBattleEnd": {
+    "title": {
+      "zh": "战斗结束时拾取",
+      "en": "Collect Pickups on Battle End"
+    },
+    "desc": {
+      "zh": "战斗结束时自动拾取战场上所有的掉落物。可设置为对象`{'pop_corpses': true}`来额外爆开所有尸体。",
+      "en": "Automatically collects all pickups on the battlefield at the end of battle. Can be an object `{pop_corpses: true}` to also pop all corpses."
+    },
+    "type": "string",
+    "defaultValue": "1"
+  },
+  "StatusOnBattleEnd/HealRandomInjury": {
+    "title": {
+      "zh": "战斗结束时治疗伤势",
+      "en": "Heal Injury on Battle End"
+    },
+    "desc": {
+      "zh": "战斗结束时治疗一个随机的伤势。数值表示治疗伤势的数量。",
+      "en": "Heals a random injury at the end of battle. The value represents the number of injuries to heal."
+    },
+    "type": "number",
+    "defaultValue": 1
+  },
+  "InjuryImmunity": {
+    "title": {
+      "zh": "伤势免疫",
+      "en": "Injury Immunity"
+    },
+    "desc": {
+      "zh": "使角色在被击倒时不会获得伤势。通常设置为1以启用。",
+      "en": "Prevents the character from getting an injury when downed. Usually set to 1 to enable."
+    },
+    "type": "number",
+    "defaultValue": 1
+  },
+  "StatusOnBattleEnd/RandomMutation": {
+    "title": {
+      "zh": "战斗结束时获得随机变异",
+      "en": "Gain Random Mutation on Battle End"
+    },
+    "desc": {
+      "zh": "战斗结束时随机获得一个变异（疾病或特性）。数值表示获得的数量。",
+      "en": "Gains a random mutation (disorder or trait) at the end of battle. The value represents the quantity."
+    },
+    "type": "number",
+    "defaultValue": 1
+  },
+  "SpawnCatCloneOnCorpsePopped": {
+    "title": {
+      "zh": "尸体爆裂时生成克隆",
+      "en": "Spawn Clone on Corpse Popped"
+    },
+    "desc": {
+      "zh": "当角色的尸体被摧毁时，会生成一个继承其技能的小猫克隆体。通常设置为1以启用。",
+      "en": "When the character's corpse is destroyed, spawns a kitten clone that inherits its abilities. Usually set to 1 to enable."
+    },
+    "type": "number",
+    "defaultValue": 1
+  },
+  "StatusOnHealed/HealRandomInjury": {
+    "title": {
+      "zh": "受到治疗时治疗伤势",
+      "en": "Heal Injury on Healed"
+    },
+    "desc": {
+      "zh": "每当角色受到治疗效果时，额外治疗一个随机伤势。数值表示治疗伤势的数量。",
+      "en": "Whenever the character is healed, also heal a random injury. The value represents the number of injuries to heal."
+    },
+    "type": "number",
+    "defaultValue": 1
+  },
+  "StatusOnBattleEnd/FullHeal": {
+    "title": {
+      "zh": "战斗结束时回满生命",
+      "en": "Full Heal on Battle End"
+    },
+    "desc": {
+      "zh": "战斗结束时将生命值完全恢复。通常设置为1以启用。",
+      "en": "Fully restores health at the end of battle. Usually set to 1 to enable."
+    },
+    "type": "number",
+    "defaultValue": 1
+  },
+  "MulticlassLevelUp": {
+    "title": {
+      "zh": "多重职业升级",
+      "en": "Multiclass Level Up"
+    },
+    "desc": {
+      "zh": "允许角色在升级时获得指定职业的技能。这是一个枚举类型。",
+      "en": "Allows the character to be offered abilities from the specified class upon level up. This is an enum type."
+    },
+    "type": "enum",
+    "defaultValue": "Fighter",
+    "enum": [
+      {
+        "value": "Fighter",
+        "zh": "战士",
+        "en": "Fighter"
+      },
+      {
+        "value": "Hunter",
+        "zh": "猎手",
+        "en": "Hunter"
+      },
+      {
+        "value": "Mage",
+        "zh": "法师",
+        "en": "Mage"
+      },
+      {
+        "value": "Medic",
+        "zh": "牧师",
+        "en": "Cleric"
+      },
+      {
+        "value": "Tank",
+        "zh": "坦克",
+        "en": "Tank"
+      },
+      {
+        "value": "Thief",
+        "zh": "盗贼",
+        "en": "Thief"
+      },
+      {
+        "value": "Monk",
+        "zh": "武僧",
+        "en": "Monk"
+      },
+      {
+        "value": "Butcher",
+        "zh": "屠夫",
+        "en": "Butcher"
+      },
+      {
+        "value": "Druid",
+        "zh": "德鲁伊",
+        "en": "Druid"
+      },
+      {
+        "value": "Tinkerer",
+        "zh": "工匠",
+        "en": "Tinkerer"
+      },
+      {
+        "value": "Necromancer",
+        "zh": "死灵法师",
+        "en": "Necromancer"
+      },
+      {
+        "value": "Psychic",
+        "zh": "灵能者",
+        "en": "Psychic"
+      },
+      {
+        "value": "Jester",
+        "zh": "小丑",
+        "en": "Jester"
+      }
+    ]
+  },
+  "AddStatusToBasicAttack/Rot": {
+    "title": {
+      "zh": "普攻附加腐烂",
+      "en": "Add Rot to Basic Attack"
+    },
+    "desc": {
+      "zh": "为基础攻击附加腐烂效果的层数。参考值：1.0 (1层), -999999.0 (永久)。",
+      "en": "Adds stacks of Rot to the basic attack. Seen values: 1.0 (1 stack), -999999.0 (permanent)."
+    },
+    "type": "number",
+    "defaultValue": 1
+  },
+  "UncappedHP": {
+    "title": {
+      "zh": "生命值无上限",
+      "en": "Uncapped HP"
+    },
+    "desc": {
+      "zh": "允许生命值超过最大值。通常设置为1.0来启用此效果。",
+      "en": "Allows HP to exceed its maximum. Typically set to 1.0 to enable."
+    },
+    "type": "number",
+    "defaultValue": 1
+  },
+  "UncappedHPBonusStr": {
+    "title": {
+      "zh": "溢出生命值奖励力量",
+      "en": "Uncapped HP Bonus Strength"
+    },
+    "desc": {
+      "zh": "每N点溢出的生命值，获得1点力量。参考值：5.0。",
+      "en": "For every N points of HP over the max, gain +1 Strength. Seen value: 5.0."
+    },
+    "type": "number",
+    "defaultValue": 5
+  },
+  "UpgradeSpawnedPickups": {
+    "title": {
+      "zh": "升级生成的拾取物",
+      "en": "Upgrade Spawned Pickups"
+    },
+    "desc": {
+      "zh": "提升你生成的食物和废料拾取物的大小等级。参考值：1.0 (变大), 2.0 (最大)。",
+      "en": "Increases the size level of food and scrap pickups you spawn. Seen values: 1.0 (bigger), 2.0 (max size)."
+    },
+    "type": "number",
+    "defaultValue": 1
+  },
+  "StatusOnEatFood/StrengthUp": {
+    "title": {
+      "zh": "吃食物时获得力量",
+      "en": "Gain Strength on Eat Food"
+    },
+    "desc": {
+      "zh": "吃食物时获得的力量点数。参考值：1.0。",
+      "en": "Strength points gained when eating food. Seen value: 1.0."
+    },
+    "type": "number",
+    "defaultValue": 1
+  },
+  "StatusOnEatFood/RandomStatUp": {
+    "title": {
+      "zh": "吃食物时获得随机属性",
+      "en": "Gain Random Stat on Eat Food"
+    },
+    "desc": {
+      "zh": "吃食物时获得的随机属性点数。参考值：1.0。",
+      "en": "Random stat points gained when eating food. Seen value: 1.0."
+    },
+    "type": "number",
+    "defaultValue": 1
+  },
+  "StatusOnTookDamage/RandomStatusFromPool/StrengthUp": {
+    "title": {
+      "zh": "受击时随机池获得力量",
+      "en": "Gain Strength from Pool on Took Damage"
+    },
+    "desc": {
+      "zh": "受击时，从随机池中获得力量的权重/点数。参考值：1.0。",
+      "en": "Weight/points for gaining Strength from a random pool when taking damage. Seen value: 1.0."
+    },
+    "type": "number",
+    "defaultValue": 1
+  },
+  "StatusOnTookDamage/RandomStatusFromPool/ConstitutionUp": {
+    "title": {
+      "zh": "受击时随机池获得体质",
+      "en": "Gain Constitution from Pool on Took Damage"
+    },
+    "desc": {
+      "zh": "受击时，从随机池中获得体质的权重/点数。参考值：1.0。",
+      "en": "Weight/points for gaining Constitution from a random pool when taking damage. Seen value: 1.0."
+    },
+    "type": "number",
+    "defaultValue": 1
+  },
+  "StatusOnTookDamage/RandomStatusFromPool/SpeedUp": {
+    "title": {
+      "zh": "受击时随机池获得速度",
+      "en": "Gain Speed from Pool on Took Damage"
+    },
+    "desc": {
+      "zh": "受击时，从随机池中获得速度的权重/点数。参考值：1.0。",
+      "en": "Weight/points for gaining Speed from a random pool when taking damage. Seen value: 1.0."
+    },
+    "type": "number",
+    "defaultValue": 1
+  },
+  "StatusOnTookDamage/StrengthUp": {
+    "title": {
+      "zh": "受击时获得力量",
+      "en": "Gain Strength on Took Damage"
+    },
+    "desc": {
+      "zh": "每次受到伤害时获得的力量点数。参考值：1.0。",
+      "en": "Strength points gained each time damage is taken. Seen value: 1.0."
+    },
+    "type": "number",
+    "defaultValue": 1
+  },
+  "StatusOnTookDamage/ConstitutionUp": {
+    "title": {
+      "zh": "受击时获得体质",
+      "en": "Gain Constitution on Took Damage"
+    },
+    "desc": {
+      "zh": "每次受到伤害时获得的体质点数。参考值：1.0。",
+      "en": "Constitution points gained each time damage is taken. Seen value: 1.0."
+    },
+    "type": "number",
+    "defaultValue": 1
+  },
+  "StatusOnTookDamage/SpeedUp": {
+    "title": {
+      "zh": "受击时获得速度",
+      "en": "Gain Speed on Took Damage"
+    },
+    "desc": {
+      "zh": "每次受到伤害时获得的速度点数。参考值：1.0。",
+      "en": "Speed points gained each time damage is taken. Seen value: 1.0."
+    },
+    "type": "number",
+    "defaultValue": 1
+  },
+  "AbilityWhenTaggedCharacterMovesNear/ability": {
+    "title": {
+      "zh": "附近单位移动时触发能力",
+      "en": "Ability on Tagged Moves Near"
+    },
+    "desc": {
+      "zh": "当带特定标签的单位移动到附近时触发的能力名称。参考值：'move'。",
+      "en": "Name of the ability to trigger when a tagged character moves nearby. Seen value: 'move'."
+    },
+    "type": "string",
+    "defaultValue": "move"
+  },
+  "AbilityWhenTaggedCharacterMovesNear/tag": {
+    "title": {
+      "zh": "附近单位移动时触发标签",
+      "en": "Tag for Moves Near Trigger"
+    },
+    "desc": {
+      "zh": "要检测的单位标签。参考值：'food'。",
+      "en": "The tag of the character to detect. Seen value: 'food'."
+    },
+    "type": "string",
+    "defaultValue": "food"
+  },
+  "AbilityWhenTaggedCharacterMovesNear/range": {
+    "title": {
+      "zh": "附近单位移动时触发范围",
+      "en": "Range for Moves Near Trigger"
+    },
+    "desc": {
+      "zh": "触发的范围。可以是数字或'global'。参考值：2.0, 'global'。",
+      "en": "The trigger range. Can be a number or 'global'. Seen values: 2.0, 'global'."
+    },
+    "type": "string",
+    "defaultValue": "2"
+  },
+  "Trample": {
+    "title": {
+      "zh": "践踏伤害",
+      "en": "Trample Damage"
+    },
+    "desc": {
+      "zh": "拥有践踏能力，并设定基础伤害值。参考值：3.0。",
+      "en": "Grants the Trample ability and sets its base damage. Seen value: 3.0."
+    },
+    "type": "number",
+    "defaultValue": 3
+  },
+  "ExtraWeaponAttacks": {
+    "title": {
+      "zh": "额外武器攻击次数",
+      "en": "Extra Weapon Attacks"
+    },
+    "desc": {
+      "zh": "每回合额外的武器攻击次数。参考值：2.0。",
+      "en": "Additional weapon attacks per turn. Seen value: 2.0."
+    },
+    "type": "number",
+    "defaultValue": 1
+  },
+  "BoostWeaponDamage": {
+    "title": {
+      "zh": "提升武器伤害",
+      "en": "Boost Weapon Damage"
+    },
+    "desc": {
+      "zh": "增加武器的基础伤害。参考值：1.0, 2.0, 5.0。",
+      "en": "Increases the base damage of the weapon. Seen values: 1.0, 2.0, 5.0."
+    },
+    "type": "number",
+    "defaultValue": 1
+  },
+  "AddStatusToWeapons/Cleave": {
+    "title": {
+      "zh": "武器附加顺劈",
+      "en": "Add Cleave to Weapons"
+    },
+    "desc": {
+      "zh": "为武器攻击附加顺劈效果。通常设置为1.0来启用。",
+      "en": "Adds Cleave effect to weapon attacks. Typically set to 1.0 to enable."
+    },
+    "type": "number",
+    "defaultValue": 1
+  },
+  "MoveQuivered": {
+    "title": {
+      "zh": "额外移动次数(开局)",
+      "en": "Quivered Moves"
+    },
+    "desc": {
+      "zh": "战斗开始时获得的额外移动次数。参考值：2.0。",
+      "en": "Bonus movement actions at the start of battle. Seen value: 2.0."
+    },
+    "type": "number",
+    "defaultValue": 1
+  },
+  "AddStatusToTrampleDamage/Cleave": {
+    "title": {
+      "zh": "践踏伤害附加顺劈",
+      "en": "Add Cleave to Trample Damage"
+    },
+    "desc": {
+      "zh": "为践踏伤害附加顺劈效果。通常设置为1.0来启用。",
+      "en": "Adds Cleave effect to trample damage. Typically set to 1.0 to enable."
+    },
+    "type": "number",
+    "defaultValue": 1
+  },
+  "AddStatusToWeapons/Bleed": {
+    "title": {
+      "zh": "武器附加流血",
+      "en": "Add Bleed to Weapons"
+    },
+    "desc": {
+      "zh": "为武器攻击附加流血效果的层数。参考值：1.0。",
+      "en": "Adds stacks of Bleed to weapon attacks. Seen value: 1.0."
+    },
+    "type": "number",
+    "defaultValue": 1
+  },
+  "AddStatusToWeapons/PullSourceToKnockbackImmuneTarget": {
+    "title": {
+      "zh": "武器附加抓钩",
+      "en": "Add Grapple to Weapons"
+    },
+    "desc": {
+      "zh": "使武器具有抓钩效果，将使用者拉向免疫击退的目标。通常设置为1.0来启用。",
+      "en": "Gives weapons a grapple effect, pulling the user towards knockback-immune targets. Typically set to 1.0 to enable."
+    },
+    "type": "number",
+    "defaultValue": 1
+  },
+  "RefreshMoveOnWeaponConnect": {
+    "title": {
+      "zh": "武器命中时刷新移动",
+      "en": "Refresh Move on Weapon Connect"
+    },
+    "desc": {
+      "zh": "当武器命中时，刷新移动动作。通常设置为1.0来启用。",
+      "en": "Refreshes movement action when a weapon connects. Typically set to 1.0 to enable."
+    },
+    "type": "number",
+    "defaultValue": 1
+  },
+  "StatusOnTookDamage/TempDamageUp": {
+    "title": {
+      "zh": "受击时获得临时伤害",
+      "en": "Gain Temp Damage on Took Damage"
+    },
+    "desc": {
+      "zh": "每次受到伤害时获得的临时伤害点数。参考值：1.0, 2.0。",
+      "en": "Temporary damage points gained each time damage is taken. Seen values: 1.0, 2.0."
+    },
+    "type": "number",
+    "defaultValue": 1
+  },
+  "StatusOnTookDamage/DamageUp": {
+    "title": {
+      "zh": "受击时获得伤害",
+      "en": "Gain Damage on Took Damage"
+    },
+    "desc": {
+      "zh": "每次受到伤害时获得的永久伤害点数。参考值：1.0。",
+      "en": "Permanent damage points gained each time damage is taken. Seen value: 1.0."
+    },
+    "type": "number",
+    "defaultValue": 1
+  },
+  "ReplaceBasicAttack": {
+    "title": {
+      "zh": "替换普攻",
+      "en": "Replace Basic Attack"
+    },
+    "desc": {
+      "zh": "将角色的基础攻击替换为指定的其他攻击能力。参考值：'BasicButcherMeleeWideSpin', 'BasicButcherMeleeWideDoubleSpin'。",
+      "en": "Replaces the character's basic attack with a different specified attack ability. Seen values: 'BasicButcherMeleeWideSpin', 'BasicButcherMeleeWideDoubleSpin'."
+    },
+    "type": "string",
+    "defaultValue": "BasicButcherMeleeWideSpin"
+  },
+  "MoveTowardsDamageSource/move_ability": {
+    "title": {
+      "zh": "移向伤害源的能力",
+      "en": "Move Towards Damage Source Ability"
+    },
+    "desc": {
+      "zh": "当受到伤害时，用何种移动能力移向伤害源。参考值：'TrampleMoveOne', 'TrampleMove'。",
+      "en": "The movement ability to use when moving towards a damage source. Seen values: 'TrampleMoveOne', 'TrampleMove'."
+    },
+    "type": "string",
+    "defaultValue": "TrampleMoveOne"
+  },
+  "LobbedHook": {
+    "title": {
+      "zh": "抛射钩",
+      "en": "Lobbed Hook"
+    },
+    "desc": {
+      "zh": "允许钩子瞄准地块。数值可能影响效果等级。参考值：1.0, 2.0。",
+      "en": "Allows the hook to target tiles. The value may affect the effect level. Seen values: 1.0, 2.0."
+    },
+    "type": "number",
+    "defaultValue": 1
+  },
+  "EquipTemporaryItem": {
+    "title": {
+      "zh": "装备临时物品",
+      "en": "Equip Temporary Item"
+    },
+    "desc": {
+      "zh": "在特定条件下装备一个临时物品。参考值：'ButcherHook_Temporary'。",
+      "en": "Equips a temporary item under certain conditions. Seen value: 'ButcherHook_Temporary'."
+    },
+    "type": "string",
+    "defaultValue": "ButcherHook_Temporary"
+  },
+  "MovementReaction/ability": {
+    "title": {
+      "zh": "移动反应能力",
+      "en": "Movement Reaction Ability"
+    },
+    "desc": {
+      "zh": "当附近有单位移动时，触发的反应能力。参考值：'weapon' (使用武器)。",
+      "en": "The ability to trigger in reaction to nearby movement. Seen value: 'weapon'."
+    },
+    "type": "string",
+    "defaultValue": "weapon"
+  },
+  "CharmAllFlies": {
+    "title": {
+      "zh": "魅惑所有苍蝇",
+      "en": "Charm All Flies"
+    },
+    "desc": {
+      "zh": "魅惑战场上所有的苍蝇单位。通常设置为1.0来启用。",
+      "en": "Charms all fly units on the battlefield. Typically set to 1.0 to enable."
+    },
+    "type": "number",
+    "defaultValue": 1
+  },
+  "FlyDamageIncrease": {
+    "title": {
+      "zh": "苍蝇伤害增加",
+      "en": "Fly Damage Increase"
+    },
+    "desc": {
+      "zh": "增加所有苍蝇单位的伤害。参考值：1.0, 4.0。",
+      "en": "Increases the damage of all fly units. Seen values: 1.0, 4.0."
+    },
+    "type": "number",
+    "defaultValue": 1
+  },
+  "AmplifyStatus": {
+    "title": {
+      "zh": "增幅状态效果",
+      "en": "Amplify Status"
+    },
+    "desc": {
+      "zh": "指定一个状态效果，每当你施加该效果时，其层数会增加。参考值：'Rot'。",
+      "en": "Specify a status effect. Whenever you apply it, its stacks are increased. Seen value: 'Rot'."
+    },
+    "type": "string",
+    "defaultValue": "Rot"
+  },
+  "StatusOnOverHealed/StrengthUp": {
+    "title": {
+      "zh": "过量治疗时获得力量",
+      "en": "Gain Strength on Over-Heal"
+    },
+    "desc": {
+      "zh": "当产生过量治疗时获得的力量点数。参考值：1.0。",
+      "en": "Strength points gained when over-healed. Seen value: 1.0."
+    },
+    "type": "number",
+    "defaultValue": 1
+  },
+  "StatusOnOverHealed/CurrentWeaponDamageUp": {
+    "title": {
+      "zh": "过量治疗时获得武器伤害",
+      "en": "Gain Weapon Damage on Over-Heal"
+    },
+    "desc": {
+      "zh": "当产生过量治疗时获得的当前武器伤害加成。参考值：1.0。",
+      "en": "Current weapon damage bonus gained when over-healed. Seen value: 1.0."
+    },
+    "type": "number",
+    "defaultValue": 1
+  },
+  "SpawnThingOnDamage/object": {
+    "title": {
+      "zh": "受击时生成物品",
+      "en": "Spawn Thing on Damage"
+    },
+    "desc": {
+      "zh": "受到伤害时生成的物品ID。参考值：'Food'。",
+      "en": "The ID of the object to spawn when taking damage. Seen value: 'Food'."
+    },
+    "type": "string",
+    "defaultValue": "Food"
+  },
+  "SpawnMeatOnMove": {
+    "title": {
+      "zh": "移动时生成肉",
+      "en": "Spawn Meat on Move"
+    },
+    "desc": {
+      "zh": "移动时生成的物品ID。参考值：'Food'。",
+      "en": "The ID of the object to spawn when moving. Seen value: 'Food'."
+    },
+    "type": "string",
+    "defaultValue": "Food"
+  },
+  "AddStatusToBasicAttack/Conditional_Shielded/BonusCritChance": {
+    "title": {
+      "zh": "对护盾单位暴击率加成",
+      "en": "Bonus Crit Chance vs Shielded"
+    },
+    "desc": {
+      "zh": "普攻对有护盾的敌人时的额外暴击率。参考值：100.0 (即100%)。",
+      "en": "Bonus critical hit chance for basic attacks against shielded enemies. Seen value: 100.0 (i.e., 100%)."
+    },
+    "type": "number",
+    "defaultValue": 100
+  },
+  "AddStatusToBasicAttack/ApplyStatusIfCrit/Purge": {
+    "title": {
+      "zh": "暴击时驱散",
+      "en": "Purge on Crit"
+    },
+    "desc": {
+      "zh": "普攻暴击时，为目标附加驱散效果。通常设置为0.0来启用。",
+      "en": "Applies Purge to the target on a basic attack crit. Typically set to 0.0 to enable."
+    },
+    "type": "number",
+    "defaultValue": 0
+  },
+  "AddCritMultiplier": {
+    "title": {
+      "zh": "增加暴击倍率",
+      "en": "Add Crit Multiplier"
+    },
+    "desc": {
+      "zh": "增加暴击伤害的倍率。输入一个带%的字符串。参考值：'100%', '50%'。",
+      "en": "Increases critical hit damage multiplier. Input as a string with '%'. Seen values: '100%', '50%'."
+    },
+    "type": "string",
+    "defaultValue": "100%"
+  },
+  "AllyBonusAbilityAura/ability": {
+    "title": {
+      "zh": "友军光环：额外能力",
+      "en": "Ally Aura: Bonus Ability"
+    },
+    "desc": {
+      "zh": "为光环范围内的友军提供一个额外的能力。参考值：'Bowl', 'Bowl2'。",
+      "en": "Grants a bonus ability to allies within the aura. Seen values: 'Bowl', 'Bowl2'."
+    },
+    "type": "string",
+    "defaultValue": "Bowl"
+  },
+  "AllyBonusAbilityAura/square": {
+    "title": {
+      "zh": "友军光环：方形范围",
+      "en": "Ally Aura: Square Range"
+    },
+    "desc": {
+      "zh": "设置光环范围为方形（包含对角线）。通常设置为 true。",
+      "en": "Sets the aura range to a square (including diagonals). Usually set to true."
+    },
+    "type": "string",
+    "defaultValue": "true"
+  },
+  "AddHiddenTag": {
+    "title": {
+      "zh": "添加隐藏标签",
+      "en": "Add Hidden Tag"
+    },
+    "desc": {
+      "zh": "为角色添加一个隐藏的标签，用于其他能力的逻辑判断。参考值：'bowling_ball'。",
+      "en": "Adds a hidden tag to the character for logical checks by other abilities. Seen value: 'bowling_ball'."
+    },
+    "type": "string",
+    "defaultValue": "bowling_ball"
+  },
+  "StatusOnTookDamage/TempMovement": {
+    "title": {
+      "zh": "受击时获得临时移动力",
+      "en": "Gain Temp Movement on Took Damage"
+    },
+    "desc": {
+      "zh": "受到伤害时获得的临时移动范围加成（持续到回合结束）。参考值：1.0。",
+      "en": "Temporary movement range bonus gained on taking damage (lasts until end of turn). Seen value: 1.0."
+    },
+    "type": "number",
+    "defaultValue": 1
+  },
+  "StatusOnTookDamage/MovementUp": {
+    "title": {
+      "zh": "受击时获得移动力",
+      "en": "Gain Movement on Took Damage"
+    },
+    "desc": {
+      "zh": "受到伤害时获得的永久移动范围加成。参考值：1.0。",
+      "en": "Permanent movement range bonus gained on taking damage. Seen value: 1.0."
+    },
+    "type": "number",
+    "defaultValue": 1
+  },
+  "StatusOnOverHealed/ForceUseAbility_NonStack": {
+    "title": {
+      "zh": "过量治疗时强制使用能力",
+      "en": "Force Ability on Over-Heal"
+    },
+    "desc": {
+      "zh": "当产生过量治疗时，强制使用一个指定的能力。参考值：'Indigestion_Fart', 'Indigestion_Fart2'。",
+      "en": "Forces the use of a specified ability when over-healed. Seen values: 'Indigestion_Fart', 'Indigestion_Fart2'."
+    },
+    "type": "string",
+    "defaultValue": "Indigestion_Fart"
+  },
+  "StatusOnOverHealed/SpawnScaledRotFly": {
+    "title": {
+      "zh": "过量治疗时生成缩放腐蝇",
+      "en": "Spawn Scaled Rot Fly on Over-Heal"
+    },
+    "desc": {
+      "zh": "过量治疗时生成腐蝇。0.0表示标准生成, 1.0表示根据过量治疗量缩放属性。",
+      "en": "Spawns a rot fly on over-heal. 0.0 for standard spawn, 1.0 to scale its stats with the heal amount."
+    },
+    "type": "number",
+    "defaultValue": 0
+  },
+  "DukeOfFlies": {
+    "title": {
+      "zh": "苍蝇公爵",
+      "en": "Duke of Flies"
+    },
+    "desc": {
+      "zh": "战斗结束时将食物拾取物转为友方苍蝇，并可带到下场战斗。通常设置为1.0来启用。",
+      "en": "Converts food pickups to allied flies at the end of battle, which persist. Typically set to 1.0 to enable."
+    },
+    "type": "number",
+    "defaultValue": 1
+  },
+  "AddStatusToBasicAttack/BounceObject": {
+    "title": {
+      "zh": "普攻生成弹跳物",
+      "en": "Bounce Object on Basic Attack"
+    },
+    "desc": {
+      "zh": "普攻命中时生成一个弹跳的物体/单位。参考值：'AllyRotFly'。",
+      "en": "Spawns a bouncing object/unit on basic attack hit. Seen value: 'AllyRotFly'."
+    },
+    "type": "string",
+    "defaultValue": "AllyRotFly"
+  },
+  "StatusOnKill/RandomStatUp": {
+    "title": {
+      "zh": "击杀时获得随机属性",
+      "en": "Gain Random Stat on Kill"
+    },
+    "desc": {
+      "zh": "每次击杀单位时获得的随机属性点数。参考值：1.0。",
+      "en": "Random stat points gained each time a unit is killed. Seen value: 1.0."
+    },
+    "type": "number",
+    "defaultValue": 1
+  },
+  "StatusOnKill/AllStatsUp": {
+    "title": {
+      "zh": "击杀时获得全属性",
+      "en": "Gain All Stats on Kill"
+    },
+    "desc": {
+      "zh": "每次击杀单位时获得的全属性提升点数。参考值：1.0。",
+      "en": "All stats up points gained each time a unit is killed. Seen value: 1.0."
+    },
+    "type": "number",
+    "defaultValue": 1
+  },
+  "StatusOnAnyDeath/LuckUp": {
+    "title": {
+      "zh": "任意单位死亡时获得幸运",
+      "en": "Gain Luck on Any Death"
+    },
+    "desc": {
+      "zh": "任何单位（敌/我）死亡时获得的幸运点数。参考值：1.0。",
+      "en": "Luck points gained when any unit (enemy/ally) dies. Seen value: 1.0."
+    },
+    "type": "number",
+    "defaultValue": 1
+  },
+  "StatusOnKill/LuckUp": {
+    "title": {
+      "zh": "击杀时获得幸运",
+      "en": "Gain Luck on Kill"
+    },
+    "desc": {
+      "zh": "每次击杀单位时获得的幸运点数。参考值：2.0。",
+      "en": "Luck points gained each time a unit is killed. Seen value: 2.0."
+    },
+    "type": "number",
+    "defaultValue": 1
+  },
+  "SpawnEachTurn/object": {
+    "title": {
+      "zh": "每回合生成物体",
+      "en": "Spawn Object Each Turn"
+    },
+    "desc": {
+      "zh": "每回合结束时生成的物体ID。可以是单个ID或ID数组。参考值：'CharmedFlea', 'CharmedMaggot', ['CharmedTumorousMaggot', ...]",
+      "en": "ID of the object to spawn at the end of each turn. Can be a single ID or an array of IDs. Seen values: 'CharmedFlea', 'CharmedMaggot', ['CharmedTumorousMaggot', ...]"
+    },
+    "type": "string",
+    "defaultValue": "CharmedFlea"
+  },
+  "SpawnEachTurn/number": {
+    "title": {
+      "zh": "每回合生成数量",
+      "en": "Spawn Number Each Turn"
+    },
+    "desc": {
+      "zh": "每回合生成物体的数量。参考值：1.0。",
+      "en": "Number of objects to spawn each turn. Seen value: 1.0."
+    },
+    "type": "number",
+    "defaultValue": 1
+  },
+  "SpawnEachTurn/chance": {
+    "title": {
+      "zh": "每回合生成几率",
+      "en": "Spawn Chance Each Turn"
+    },
+    "desc": {
+      "zh": "每回合生成物体的几率（0到1之间）。参考值：0.5。",
+      "en": "Chance to spawn an object each turn (from 0 to 1). Seen value: 0.5."
+    },
+    "type": "number",
+    "defaultValue": 0.5
+  },
+  "SpawnOnBattleStart/object": {
+    "title": {
+      "zh": "战斗开始时生成物体",
+      "en": "Spawn Object on Battle Start"
+    },
+    "desc": {
+      "zh": "战斗开始时生成的物体ID。可以是单个ID或ID数组。参考值：'CharmedFlea'。",
+      "en": "ID of the object to spawn at the start of battle. Can be a single ID or an array of IDs. Seen value: 'CharmedFlea'."
+    },
+    "type": "string",
+    "defaultValue": "CharmedFlea"
+  },
+  "SpawnOnBattleStart/number": {
+    "title": {
+      "zh": "战斗开始时生成数量",
+      "en": "Spawn Number on Battle Start"
+    },
+    "desc": {
+      "zh": "战斗开始时生成物体的数量。可以是固定值或一个[min, max]数组。参考值：[2.0, 3.0]。",
+      "en": "Number of objects to spawn at the start of battle. Can be a fixed value or a [min, max] array. Seen value: [2.0, 3.0]."
+    },
+    "type": "string",
+    "defaultValue": "1"
+  },
+  "StatusEachTurnEnd/SpeedUp": {
+    "title": {
+      "zh": "回合结束时获得速度",
+      "en": "Gain Speed at Turn End"
+    },
+    "desc": {
+      "zh": "每回合结束时获得的速度点数。参考值：1.0。",
+      "en": "Speed points gained at the end of each turn. Seen value: 1.0."
+    },
+    "type": "number",
+    "defaultValue": 1
+  },
+  "ExtraMovePoints": {
+    "title": {
+      "zh": "额外移动点数",
+      "en": "Extra Move Points"
+    },
+    "desc": {
+      "zh": "每回合可以额外移动的次数。参考值：1.0。",
+      "en": "Number of extra times you can move per turn. Seen value: 1.0."
+    },
+    "type": "number",
+    "defaultValue": 1
+  },
+  "StatusOnCrit/DamageUp": {
+    "title": {
+      "zh": "暴击时获得伤害",
+      "en": "Gain Damage on Crit"
+    },
+    "desc": {
+      "zh": "每次造成暴击时获得的伤害加成。参考值：1.0。",
+      "en": "Damage bonus gained each time you land a critical hit. Seen value: 1.0."
+    },
+    "type": "number",
+    "defaultValue": 1
+  },
+  "CritChanceUp": {
+    "title": {
+      "zh": "暴击率提升",
+      "en": "Crit Chance Up"
+    },
+    "desc": {
+      "zh": "增加暴击率（百分点）。参考值：5.0, 25.0。",
+      "en": "Increases critical hit chance (percentage points). Seen values: 5.0, 25.0."
+    },
+    "type": "number",
+    "defaultValue": 5
+  },
+  "StatusOnCrit/CritChanceUp": {
+    "title": {
+      "zh": "暴击时获得暴击率",
+      "en": "Gain Crit Chance on Crit"
+    },
+    "desc": {
+      "zh": "每次造成暴击时获得的暴击率加成（百分点）。参考值：5.0。",
+      "en": "Crit chance bonus (percentage points) gained each time you land a critical hit. Seen value: 5.0."
+    },
+    "type": "number",
+    "defaultValue": 5
+  },
+  "AddCorpseHealth": {
+    "title": {
+      "zh": "增加尸体生命值",
+      "en": "Add Corpse Health"
+    },
+    "desc": {
+      "zh": "增加你死亡后尸体的生命值。参考值：3.0, 96.0。负值可使其立即消失。",
+      "en": "Increases the health of your corpse after death. Seen values: 3.0, 96.0. A negative value can make it disappear instantly."
+    },
+    "type": "number",
+    "defaultValue": 3
+  },
+  "MetalDetector": {
+    "title": {
+      "zh": "金属探测器几率",
+      "en": "Metal Detector Chance"
+    },
+    "desc": {
+      "zh": "移动时在脚下生成金币的几率（百分比）。参考值：5.0, 10.0。",
+      "en": "Chance (as a percentage) to spawn a coin underfoot when moving. Seen values: 5.0, 10.0."
+    },
+    "type": "number",
+    "defaultValue": 5
+  },
+  "ChanceToRevive/stacks": {
+    "title": {
+      "zh": "复活几率",
+      "en": "Chance to Revive"
+    },
+    "desc": {
+      "zh": "在被击倒后，每回合结束时复活的几率（百分比）。参考值：25.0, 33.0。",
+      "en": "Chance (as a percentage) to revive at the end of each round after being downed. Seen values: 25.0, 33.0."
+    },
+    "type": "number",
+    "defaultValue": 25
+  },
+  "ChanceToRevive/statuses/AllStatsUp": {
+    "title": {
+      "zh": "复活时获得全属性",
+      "en": "Gain All Stats on Revive"
+    },
+    "desc": {
+      "zh": "通过几率复活时获得的全属性提升点数。参考值：1.0。",
+      "en": "All stats up points gained when reviving by chance. Seen value: 1.0."
+    },
+    "type": "number",
+    "defaultValue": 1
+  },
+  "ChanceToRevive/statuses/HealthGain": {
+    "title": {
+      "zh": "复活时恢复生命",
+      "en": "Health Gain on Revive"
+    },
+    "desc": {
+      "zh": "通过几率复活时恢复的生命值。参考值：10.0。",
+      "en": "Health restored when reviving by chance. Seen value: 10.0."
+    },
+    "type": "number",
+    "defaultValue": 10
+  },
+  "BoostDamageAura": {
+    "title": {
+      "zh": "伤害光环",
+      "en": "Boost Damage Aura"
+    },
+    "desc": {
+      "zh": "为附近友军提供伤害加成。参考值：1.0。",
+      "en": "Provides a damage bonus to nearby allies. Seen value: 1.0."
+    },
+    "type": "number",
+    "defaultValue": 1
+  },
+  "BoostRangeAura": {
+    "title": {
+      "zh": "范围光环",
+      "en": "Boost Range Aura"
+    },
+    "desc": {
+      "zh": "为附近友军提供攻击范围加成。参考值：1.0。",
+      "en": "Provides a range bonus to nearby allies. Seen value: 1.0."
+    },
+    "type": "number",
+    "defaultValue": 1
+  },
+  "BoostDamageGlobalAura": {
+    "title": {
+      "zh": "全局伤害光环",
+      "en": "Boost Damage Global Aura"
+    },
+    "desc": {
+      "zh": "为所有友军提供伤害加成。参考值：1.0。",
+      "en": "Provides a damage bonus to all allies. Seen value: 1.0."
+    },
+    "type": "number",
+    "defaultValue": 1
+  },
+  "BoostRangeGlobalAura": {
+    "title": {
+      "zh": "全局范围光环",
+      "en": "Boost Range Global Aura"
+    },
+    "desc": {
+      "zh": "为所有友军提供攻击范围加成。参考值：1.0。",
+      "en": "Provides a range bonus to all allies. Seen value: 1.0."
+    },
+    "type": "number",
+    "defaultValue": 1
+  },
+  "MeleeRevengeDamage/effects/Poison": {
+    "title": {
+      "zh": "近战反击：中毒",
+      "en": "Melee Revenge: Poison"
+    },
+    "desc": {
+      "zh": "当受到近战攻击时，对攻击者施加中毒的层数。参考值：1.0。",
+      "en": "Stacks of Poison to apply to the attacker upon being hit by a melee attack. Seen value: 1.0."
+    },
+    "type": "number",
+    "defaultValue": 1
+  },
+  "MeleeRevengeDamage/effects/Bleed": {
+    "title": {
+      "zh": "近战反击：流血",
+      "en": "Melee Revenge: Bleed"
+    },
+    "desc": {
+      "zh": "当受到近战攻击时，对攻击者施加流血的层数。参考值：1.0。",
+      "en": "Stacks of Bleed to apply to the attacker upon being hit by a melee attack. Seen value: 1.0."
+    },
+    "type": "number",
+    "defaultValue": 1
+  },
+  "MeleeRevengeDamage/effects/Bruise": {
+    "title": {
+      "zh": "近战反击：瘀伤",
+      "en": "Melee Revenge: Bruise"
+    },
+    "desc": {
+      "zh": "当受到近战攻击时，对攻击者施加瘀伤的层数。参考值：1.0。",
+      "en": "Stacks of Bruise to apply to the attacker upon being hit by a melee attack. Seen value: 1.0."
+    },
+    "type": "number",
+    "defaultValue": 1
+  },
+  "MeleeRevengeDamage/effects/Weakness": {
+    "title": {
+      "zh": "近战反击：虚弱",
+      "en": "Melee Revenge: Weakness"
+    },
+    "desc": {
+      "zh": "当受到近战攻击时，对攻击者施加虚弱的层数。参考值：1.0。",
+      "en": "Stacks of Weakness to apply to the attacker upon being hit by a melee attack. Seen value: 1.0."
+    },
+    "type": "number",
+    "defaultValue": 1
+  },
+  "MeleeRevengeDamage/effects/Leeches": {
+    "title": {
+      "zh": "近战反击：水蛭",
+      "en": "Melee Revenge: Leeches"
+    },
+    "desc": {
+      "zh": "当受到近战攻击时，对攻击者施加水蛭的层数。参考值：1.0。",
+      "en": "Stacks of Leeches to apply to the attacker upon being hit by a melee attack. Seen value: 1.0."
+    },
+    "type": "number",
+    "defaultValue": 1
+  },
+  "AddUnfilledMaxHealth": {
+    "title": {
+      "zh": "增加未填充的生命上限",
+      "en": "Add Unfilled Max Health"
+    },
+    "desc": {
+      "zh": "战斗开始时增加最大生命值，但不填充。参考值：20.0, 50.0。",
+      "en": "Increases max health at the start of battle, but doesn't fill it. Seen values: 20.0, 50.0."
+    },
+    "type": "number",
+    "defaultValue": 20
+  },
+  "AllyDamageReduction": {
+    "title": {
+      "zh": "对友军伤害减免",
+      "en": "Ally Damage Reduction"
+    },
+    "desc": {
+      "zh": "你对友军造成的伤害将被完全减免。通常设置为0.0。",
+      "en": "Damage you deal to allies is completely reduced. Usually set to 0.0."
+    },
+    "type": "number",
+    "defaultValue": 0
+  },
+  "WeaponsDontLoseDurability": {
+    "title": {
+      "zh": "武器不掉耐久",
+      "en": "Weapons Don't Lose Durability"
+    },
+    "desc": {
+      "zh": "武器不会损失耐久度。通常设置为0.0。",
+      "en": "Weapons will not lose durability. Usually set to 0.0."
+    },
+    "type": "number",
+    "defaultValue": 0
+  },
+  "DodgeChance": {
+    "title": {
+      "zh": "闪避几率",
+      "en": "Dodge Chance"
+    },
+    "desc": {
+      "zh": "增加闪避几率。输入一个带%的字符串。参考值：'25%'。",
+      "en": "Increases dodge chance. Input as a string with '%'. Seen value: '25%'."
+    },
+    "type": "string",
+    "defaultValue": "25%"
+  },
+  "BackstabImmunity": {
+    "title": {
+      "zh": "背刺免疫",
+      "en": "Backstab Immunity"
+    },
+    "desc": {
+      "zh": "免疫背刺的额外伤害。通常设置为1.0来启用。",
+      "en": "Immunity to bonus damage from backstabs. Typically set to 1.0 to enable."
+    },
+    "type": "number",
+    "defaultValue": 1
+  },
+  "IgnoreTiles": {
+    "title": {
+      "zh": "忽略地块效果",
+      "en": "Ignore Tiles"
+    },
+    "desc": {
+      "zh": "免疫负面地块效果。通常设置为1.0来启用。",
+      "en": "Immunity to negative tile effects. Typically set to 1.0 to enable."
+    },
+    "type": "number",
+    "defaultValue": 1
+  },
+  "StatusCarefulness": {
+    "title": {
+      "zh": "状态谨慎",
+      "en": "Status Carefulness"
+    },
+    "desc": {
+      "zh": "防止对友军施加负面状态。通常设置为1.0来启用。",
+      "en": "Prevents applying debuffs to allies. Typically set to 1.0 to enable."
+    },
+    "type": "number",
+    "defaultValue": 1
+  },
+  "DirtyClaws": {
+    "title": {
+      "zh": "脏爪子",
+      "en": "Dirty Claws"
+    },
+    "desc": {
+      "zh": "对中毒或流血的敌人攻击时，会额外施加+1层对应的状态。通常设置为1.0来启用。",
+      "en": "When attacking Poisoned or Bleeding enemies, apply +1 stack of the corresponding status. Typically set to 1.0 to enable."
+    },
+    "type": "number",
+    "defaultValue": 1
+  },
+  "AddStatusToBasicAttack/Poison": {
+    "title": {
+      "zh": "普攻附加中毒",
+      "en": "Add Poison to Basic Attack"
+    },
+    "desc": {
+      "zh": "为基础攻击附加中毒效果的层数。参考值：1.0。",
+      "en": "Adds stacks of Poison to the basic attack. Seen value: 1.0."
+    },
+    "type": "number",
+    "defaultValue": 1
+  },
+  "LateBloomer/stacks": {
+    "title": {
+      "zh": "晚熟：触发回合",
+      "en": "Late Bloomer: Trigger Turn"
+    },
+    "desc": {
+      "zh": "在第N回合时触发晚熟效果。参考值：5.0, 3.0。",
+      "en": "The turn number on which the Late Bloomer effect triggers. Seen values: 5.0, 3.0."
+    },
+    "type": "number",
+    "defaultValue": 5
+  },
+  "LateBloomer/AllStatsUp": {
+    "title": {
+      "zh": "晚熟：全属性提升",
+      "en": "Late Bloomer: All Stats Up"
+    },
+    "desc": {
+      "zh": "触发晚熟效果时获得的全属性提升点数。参考值：3.0。",
+      "en": "All stats up points gained when the Late Bloomer effect triggers. Seen value: 3.0."
+    },
+    "type": "number",
+    "defaultValue": 3
+  },
+  "Study": {
+    "title": {
+      "zh": "研究",
+      "en": "Study"
+    },
+    "desc": {
+      "zh": "攻击新类型单位时获得智力。1.0为基础效果, 对象值可添加'marked'来标记同类敌人。",
+      "en": "Gain Intelligence when hitting a new unit type. 1.0 for base effect, object value can add 'marked' to mark similar enemies."
+    },
+    "type": "string",
+    "defaultValue": "1"
+  },
+  "HealthRegenUp": {
+    "title": {
+      "zh": "生命再生提升",
+      "en": "Health Regen Up"
+    },
+    "desc": {
+      "zh": "增加每回合的生命恢复量。参考值：1.0, 2.0。",
+      "en": "Increases health regeneration per turn. Seen values: 1.0, 2.0."
+    },
+    "type": "number",
+    "defaultValue": 1
+  },
+  "HealingAura": {
+    "title": {
+      "zh": "治疗光环",
+      "en": "Healing Aura"
+    },
+    "desc": {
+      "zh": "为附近友军提供生命再生。参考值：1.0。",
+      "en": "Provides health regeneration to nearby allies. Seen value: 1.0."
+    },
+    "type": "number",
+    "defaultValue": 1
+  },
+  "AddBonusRange": {
+    "title": {
+      "zh": "增加额外射程",
+      "en": "Add Bonus Range"
+    },
+    "desc": {
+      "zh": "增加角色的攻击射程。参考值：1.0, 2.0。",
+      "en": "Increases the character's attack range. Seen values: 1.0, 2.0."
+    },
+    "type": "number",
+    "defaultValue": 1
+  },
+  "AddRangedCritChance": {
+    "title": {
+      "zh": "增加远程暴击率",
+      "en": "Add Ranged Crit Chance"
+    },
+    "desc": {
+      "zh": "增加远程攻击的暴击率。输入一个带%的字符串。参考值：'25%'。",
+      "en": "Increases critical hit chance for ranged attacks. Input as a string with '%'. Seen value: '25%'."
+    },
+    "type": "string",
+    "defaultValue": "25%"
+  },
+  "Phasing": {
+    "title": {
+      "zh": "相位移动",
+      "en": "Phasing"
+    },
+    "desc": {
+      "zh": "允许穿过单位和物体。通常设置为1.0来启用。",
+      "en": "Allows movement through units and objects. Typically set to 1.0 to enable."
+    },
+    "type": "number",
+    "defaultValue": 1
+  },
+  "DamageUp": {
+    "title": {
+      "zh": "伤害提升",
+      "en": "Damage Up"
+    },
+    "desc": {
+      "zh": "永久增加角色的基础伤害。参考值：1.0, 3.0, 4.0。",
+      "en": "Permanently increases the character's base damage. Seen values: 1.0, 3.0, 4.0."
+    },
+    "type": "number",
+    "defaultValue": 1
+  },
+  "KillsToMeat": {
+    "title": {
+      "zh": "击杀变肉",
+      "en": "Kills to Meat"
+    },
+    "desc": {
+      "zh": "击杀单位或摧毁尸体时，将其变为指定的物品。参考值：'Food'。",
+      "en": "When killing a unit or destroying a corpse, it becomes the specified item. Seen value: 'Food'."
+    },
+    "type": "string",
+    "defaultValue": "Food"
+  },
+  "AddSpellDamage": {
+    "title": {
+      "zh": "增加法术伤害",
+      "en": "Add Spell Damage"
+    },
+    "desc": {
+      "zh": "增加法术造成的伤害。参考值：1.0。",
+      "en": "Increases the damage dealt by spells. Seen value: 1.0."
+    },
+    "type": "number",
+    "defaultValue": 1
+  },
+  "AddChaScalingSpellDamage": {
+    "title": {
+      "zh": "魅力加成法术伤害",
+      "en": "Charisma Scaling Spell Damage"
+    },
+    "desc": {
+      "zh": "每N点魅力，增加1点法术伤害。参考值：3.0。",
+      "en": "For every N points of Charisma, gain +1 spell damage. Seen value: 3.0."
+    },
+    "type": "number",
+    "defaultValue": 3
+  },
+  "BoostAllyStatsOnDeath": {
+    "title": {
+      "zh": "死亡时强化友军",
+      "en": "Boost Ally Stats on Death"
+    },
+    "desc": {
+      "zh": "当你被击倒时，为所有友军提供全属性提升。参考值：1.0, 2.0。",
+      "en": "When you are downed, grant all allies an All Stats Up buff. Seen values: 1.0, 2.0."
+    },
+    "type": "number",
+    "defaultValue": 1
+  },
+  "StatusAlliesOnDeath/HealAndOverhealToShield": {
+    "title": {
+      "zh": "死亡时治疗友军(溢出转盾)",
+      "en": "Heal Allies on Death (Overflow to Shield)"
+    },
+    "desc": {
+      "zh": "当你被击倒时，治疗所有友军，溢出部分转为护盾。参考值：12.0, 20.0。",
+      "en": "When you are downed, heal all allies, with overflow converted to shield. Seen values: 12.0, 20.0."
+    },
+    "type": "number",
+    "defaultValue": 12
+  },
+  "FullHealthCritChance": {
+    "title": {
+      "zh": "满血时暴击率",
+      "en": "Full Health Crit Chance"
+    },
+    "desc": {
+      "zh": "当生命值全满时，获得的暴击率加成。参考值：100.0 (即100%)。",
+      "en": "Bonus critical hit chance when at full health. Seen value: 100.0 (i.e., 100%)."
+    },
+    "type": "number",
+    "defaultValue": 100
+  },
+  "FullHealthAllStatsUp": {
+    "title": {
+      "zh": "满血时全属性提升",
+      "en": "Full Health All Stats Up"
+    },
+    "desc": {
+      "zh": "当生命值全满时，获得的全属性提升。参考值：1.0。",
+      "en": "All stats up bonus when at full health. Seen value: 1.0."
+    },
+    "type": "number",
+    "defaultValue": 1
+  },
+  "FullHealthManaRegen": {
+    "title": {
+      "zh": "满血时法力恢复",
+      "en": "Full Health Mana Regen"
+    },
+    "desc": {
+      "zh": "当生命值全满时，获得的法力恢复加成。参考值：5.0。",
+      "en": "Mana regeneration bonus when at full health. Seen value: 5.0."
+    },
+    "type": "number",
+    "defaultValue": 5
+  },
+  "SmallEnemiesIgnoreYou": {
+    "title": {
+      "zh": "小型敌人忽略你",
+      "en": "Small Enemies Ignore You"
+    },
+    "desc": {
+      "zh": "使小型敌人不会主动攻击你。通常设置为1.0来启用。",
+      "en": "Causes small enemies to not attack you. Typically set to 1.0 to enable."
+    },
+    "type": "number",
+    "defaultValue": 1
+  },
+  "RevengeDamage/effects/Fear": {
+    "title": {
+      "zh": "反击：恐惧",
+      "en": "Revenge: Fear"
+    },
+    "desc": {
+      "zh": "受到攻击时，对攻击者施加恐惧。参考值：1.0。",
+      "en": "Applies Fear to the attacker when hit. Seen value: 1.0."
+    },
+    "type": "number",
+    "defaultValue": 1
+  },
+  "ExtraStatusWhenDealingDamage/Conditional_Ally/DamageUp": {
+    "title": {
+      "zh": "对友军造成伤害时：伤害提升",
+      "en": "On Damaging Ally: Damage Up"
+    },
+    "desc": {
+      "zh": "当你对友军造成伤害时，为其提供伤害提升。参考值：1.0。",
+      "en": "When you damage an ally, grant them a Damage Up buff. Seen value: 1.0."
+    },
+    "type": "number",
+    "defaultValue": 1
+  },
+  "ExtraStatusWhenDealingDamage/Conditional_Ally/SpeedUp": {
+    "title": {
+      "zh": "对友军造成伤害时：速度提升",
+      "en": "On Damaging Ally: Speed Up"
+    },
+    "desc": {
+      "zh": "当你对友军造成伤害时，为其提供速度提升。参考值：1.0。",
+      "en": "When you damage an ally, grant them a Speed Up buff. Seen value: 1.0."
+    },
+    "type": "number",
+    "defaultValue": 1
+  },
+  "AutoCritLowDamage": {
+    "title": {
+      "zh": "低伤害自动暴击阈值",
+      "en": "Auto-Crit Low Damage Threshold"
+    },
+    "desc": {
+      "zh": "当你的攻击伤害低于或等于此数值时，必定暴击。参考值：2.0, 3.0。",
+      "en": "When your damage is less than or equal to this value, it will always be a critical hit. Seen values: 2.0, 3.0."
+    },
+    "type": "number",
+    "defaultValue": 2
+  },
+  "AbilityReaction": {
+    "title": {
+      "zh": "能力反应",
+      "en": "Ability Reaction"
+    },
+    "desc": {
+      "zh": "在特定条件下（如受击）触发一个指定的能力。参考值：'Gassy_AssBlast', 'Gassy_AssBlast2'。",
+      "en": "Triggers a specified ability under certain conditions (like being hit). Seen values: 'Gassy_AssBlast', 'Gassy_AssBlast2'."
+    },
+    "type": "string",
+    "defaultValue": "Gassy_AssBlast"
+  },
+  "ConsumablesInfiniteRange": {
+    "title": {
+      "zh": "消耗品无限范围",
+      "en": "Consumables Infinite Range"
+    },
+    "desc": {
+      "zh": "允许你在任何位置对其他单位使用消耗品。通常设置为1.0来启用。",
+      "en": "Allows you to use consumables on other units from any distance. Typically set to 1.0 to enable."
+    },
+    "type": "number",
+    "defaultValue": 1
+  },
+  "ConsumableEffectsMultiplierBonus": {
+    "title": {
+      "zh": "消耗品效果倍率加成",
+      "en": "Consumable Effects Multiplier Bonus"
+    },
+    "desc": {
+      "zh": "为你使用的消耗品效果提供一个额外的乘数。1.0代表效果翻倍。参考值：1.0。",
+      "en": "Provides an additional multiplier for the effects of consumables you use. 1.0 means double effect. Seen value: 1.0."
+    },
+    "type": "number",
+    "defaultValue": 1
+  },
+  "AllowPassTurn": {
+    "title": {
+      "zh": "允许跳过回合",
+      "en": "Allow Pass Turn"
+    },
+    "desc": {
+      "zh": "允许玩家选择跳过回合以换取回合结束时的额外回合。0.0表示跳过会损失法力恢复，1.0则不会。",
+      "en": "Allows passing a turn for an extra turn at the end of the round. 0.0 means passing loses mana regen, 1.0 does not."
+    },
+    "type": "number",
+    "defaultValue": 0
+  },
+  "StatMinimum": {
+    "title": {
+      "zh": "属性下限",
+      "en": "Stat Minimum"
+    },
+    "desc": {
+      "zh": "设置所有基础属性的最低值，不能低于此值。参考值：5.0, 7.0。",
+      "en": "Sets a minimum value for all base stats; they cannot go lower. Seen values: 5.0, 7.0."
+    },
+    "type": "number",
+    "defaultValue": 5
+  },
+  "RemoveOncePerFightRestriction": {
+    "title": {
+      "zh": "移除每场战斗一次限制",
+      "en": "Remove Once Per Fight Restriction"
+    },
+    "desc": {
+      "zh": "将“每场战斗一次”的技能限制改为“每回合一次”。通常设置为1.0来启用。",
+      "en": "Changes 'once per battle' ability restrictions to 'once per turn'. Typically set to 1.0 to enable."
+    },
+    "type": "number",
+    "defaultValue": 1
+  },
+  "AbilityChargeRefundChance/chance": {
+    "title": {
+      "zh": "技能次数返还几率",
+      "en": "Ability Charge Refund Chance"
+    },
+    "desc": {
+      "zh": "使用“每回合一次”的技能后，有几率返还使用次数。输入一个带%的字符串。参考值：'50%'。",
+      "en": "Chance to refund a use of a 'once per turn' ability after using it. Input as a string with '%'. Seen value: '50%'."
+    },
+    "type": "string",
+    "defaultValue": "50%"
+  },
+  "PassiveAfterXKills/stacks": {
+    "title": {
+      "zh": "N次击杀后触发被动：击杀数",
+      "en": "Passive After X Kills: Kill Count"
+    },
+    "desc": {
+      "zh": "需要达到的击杀数才能触发被动。参考值：3.0。",
+      "en": "The number of kills required to trigger the passive. Seen value: 3.0."
+    },
+    "type": "number",
+    "defaultValue": 3
+  },
+  "PassiveAfterXKills/passives/SpeedUp": {
+    "title": {
+      "zh": "N次击杀后触发被动：速度提升",
+      "en": "Passive After X Kills: Speed Up"
+    },
+    "desc": {
+      "zh": "达到击杀数后获得的速度提升。参考值：6.0。",
+      "en": "Speed bonus gained after reaching the kill count. Seen value: 6.0."
+    },
+    "type": "number",
+    "defaultValue": 6
+  },
+  "PassiveAfterXKills/passives/BackstabCritChance": {
+    "title": {
+      "zh": "N次击杀后触发被动：背刺暴击",
+      "en": "Passive After X Kills: Backstab Crit"
+    },
+    "desc": {
+      "zh": "达到击杀数后，背刺的暴击率。1.0代表100%。参考值：1.0。",
+      "en": "Backstab critical hit chance after reaching the kill count. 1.0 means 100%. Seen value: 1.0."
+    },
+    "type": "number",
+    "defaultValue": 1
+  },
+  "PassiveAfterXKills/passives/ExtraBasicAttacks": {
+    "title": {
+      "zh": "N次击杀后触发被动：额外普攻",
+      "en": "Passive After X Kills: Extra Basic Attacks"
+    },
+    "desc": {
+      "zh": "达到击杀数后，每回合获得的额外普攻次数。参考值：1.0。",
+      "en": "Extra basic attacks per turn gained after reaching the kill count. Seen value: 1.0."
+    },
+    "type": "number",
+    "defaultValue": 1
+  },
+  "StrengthInNumbersAura": {
+    "title": {
+      "zh": "人多势众光环",
+      "en": "Strength in Numbers Aura"
+    },
+    "desc": {
+      "zh": "为每个友方宠物提供伤害加成，数值等于其他友方宠物的数量。可设置为`{ 'count_self': true }`使自己也加入计算。",
+      "en": "Grants each familiar a damage bonus equal to the number of other familiars. Can be set to `{ 'count_self': true }` to include self in the count."
+    },
+    "type": "string",
+    "defaultValue": "1"
+  },
+  "LevelUpClassOverride": {
+    "title": {
+      "zh": "覆盖升级职业池",
+      "en": "Level Up Class Override"
+    },
+    "desc": {
+      "zh": "强制升级时只提供指定职业的技能。参考值：'Jester' (小丑), 'Colorless' (无色)。",
+      "en": "Forces level-up ability offerings to be from a specific class. Seen values: 'Jester', 'Colorless'."
+    },
+    "type": "string",
+    "defaultValue": "Jester"
+  },
+  "AddLevelUpRerolls": {
+    "title": {
+      "zh": "增加升级重摇次数",
+      "en": "Add Level Up Rerolls"
+    },
+    "desc": {
+      "zh": "增加升级时可用的重摇次数。参考值：2.0, 99.0。",
+      "en": "Increases the number of available rerolls during level up. Seen value: 2.0, 99.0."
+    },
+    "type": "number",
+    "defaultValue": 1
+  },
+  "Quivered": {
+    "title": {
+      "zh": "箭袋（储存普攻）",
+      "en": "Quiver (Store Basic Attacks)"
+    },
+    "desc": {
+      "zh": "允许储存未使用的普攻次数到后续回合，或在战斗开始时获得额外攻击次数。参考值：1.0, 2.0。",
+      "en": "Allows storing unused basic attacks for later turns, or grants bonus attacks at battle start. Seen values: 1.0, 2.0."
+    },
+    "type": "number",
+    "defaultValue": 1
+  },
+  "KillsHeal": {
+    "title": {
+      "zh": "击杀回血",
+      "en": "Kills Heal"
+    },
+    "desc": {
+      "zh": "击杀单位时恢复生命值。可以是固定数值或百分比字符串。参考值：5.0, '50%'。",
+      "en": "Restores health upon killing a unit. Can be a fixed number or a percentage string. Seen values: 5.0, '50%'."
+    },
+    "type": "string",
+    "defaultValue": "5"
+  },
+  "Vengeful": {
+    "title": {
+      "zh": "复仇",
+      "en": "Vengeful"
+    },
+    "desc": {
+      "zh": "对曾伤害过你的敌人攻击时必定暴击。通常设置为1.0来启用。",
+      "en": "Attacks against enemies that have damaged you are always critical. Typically set to 1.0 to enable."
+    },
+    "type": "number",
+    "defaultValue": 1
+  },
+  "AddTemporaryEffectsToBasicAttack/Fury": {
+    "title": {
+      "zh": "普攻附加狂怒",
+      "en": "Add Fury to Basic Attack"
+    },
+    "desc": {
+      "zh": "为普攻附加“狂怒”效果，有几率多次攻击。数值为几率。参考值：75.0。",
+      "en": "Adds 'Fury' effect to basic attacks, with a chance to attack multiple times. The value is the chance. Seen value: 75.0."
+    },
+    "type": "number",
+    "defaultValue": 75
+  },
+  "BoostWeaponDamage/damage": {
+    "title": {
+      "zh": "提升武器伤害",
+      "en": "Boost Weapon Damage"
+    },
+    "desc": {
+      "zh": "增加武器的基础伤害。参考值：2.0, 3.0。",
+      "en": "Increases the base damage of the weapon. Seen values: 2.0, 3.0."
+    },
+    "type": "number",
+    "defaultValue": 1
+  },
+  "BoostWeaponDamage/crit_chance": {
+    "title": {
+      "zh": "提升武器暴击率",
+      "en": "Boost Weapon Crit Chance"
+    },
+    "desc": {
+      "zh": "增加武器的暴击率。输入0-1之间的小数。参考值：0.25, 0.5。",
+      "en": "Increases the weapon's critical hit chance. Input a decimal between 0 and 1. Seen values: 0.25, 0.5."
+    },
+    "type": "number",
+    "defaultValue": 0.25
+  },
+  "EquipRandomTemporaryItemFromPool": {
+    "title": {
+      "zh": "从池中装备随机临时物品",
+      "en": "Equip Random Temp Item from Pool"
+    },
+    "desc": {
+      "zh": "在特定条件下，从指定的物品池中随机装备一个临时物品。参考值：'weapons'。",
+      "en": "Under certain conditions, equips a random temporary item from a specified pool. Seen value: 'weapons'."
+    },
+    "type": "string",
+    "defaultValue": "weapons"
+  },
+  "ShoulderCheck": {
+    "title": {
+      "zh": "移动后攻击（肩撞）",
+      "en": "Shoulder Check"
+    },
+    "desc": {
+      "zh": "移动后如果正对敌人，则自动攻击，造成普攻伤害的一定百分比。输入一个带%的字符串。参考值：'33%', '100%'。",
+      "en": "After moving, if facing an enemy, automatically attack for a percentage of basic attack damage. Input as a string with '%'. Seen values: '33%', '100%'."
+    },
+    "type": "string",
+    "defaultValue": "33%"
+  },
+  "AddStatusToBasicAttack/Bruise": {
+    "title": {
+      "zh": "普攻附加瘀伤",
+      "en": "Add Bruise to Basic Attack"
+    },
+    "desc": {
+      "zh": "为基础攻击附加瘀伤效果的层数。参考值：1.0, 2.0。",
+      "en": "Adds stacks of Bruise to the basic attack. Seen values: 1.0, 2.0."
+    },
+    "type": "number",
+    "defaultValue": 1
+  },
+  "BasicAttackAOEBonus": {
+    "title": {
+      "zh": "普攻范围加成",
+      "en": "Basic Attack AOE Bonus"
+    },
+    "desc": {
+      "zh": "增加基础攻击的范围效果。参考值：1.0, 2.0。",
+      "en": "Increases the area of effect for the basic attack. Seen values: 1.0, 2.0."
+    },
+    "type": "number",
+    "defaultValue": 1
+  },
+  "BasicAttackDamageMultiplier": {
+    "title": {
+      "zh": "普攻伤害倍率",
+      "en": "Basic Attack Damage Multiplier"
+    },
+    "desc": {
+      "zh": "调整基础攻击的伤害倍率。输入一个带%的字符串。参考值：'50%'。",
+      "en": "Adjusts the damage multiplier for the basic attack. Input as a string with '%'. Seen value: '50%'."
+    },
+    "type": "string",
+    "defaultValue": "100%"
+  },
+  "TileDamageMultiplier": {
+    "title": {
+      "zh": "地块伤害倍率",
+      "en": "Tile Damage Multiplier"
+    },
+    "desc": {
+      "zh": "调整地块造成的伤害和效果倍率。可以设置为对象`{'multiplier': 2.0, 'ally_multiplier': 0.0}`来区别敌我。",
+      "en": "Adjusts the damage and effect multiplier of tiles. Can be an object `{'multiplier': 2.0, 'ally_multiplier': 0.0}` to differentiate."
+    },
+    "type": "string",
+    "defaultValue": "1"
+  },
+  "TrapEffectsMultiplier": {
+    "title": {
+      "zh": "陷阱效果倍率",
+      "en": "Trap Effects Multiplier"
+    },
+    "desc": {
+      "zh": "调整你放置的陷阱所造成伤害和效果的倍率。参考值：2.0。",
+      "en": "Adjusts the damage and effect multiplier of traps you place. Seen value: 2.0."
+    },
+    "type": "number",
+    "defaultValue": 1
+  },
+  "AlliesAvoidTraps": {
+    "title": {
+      "zh": "友军避开陷阱",
+      "en": "Allies Avoid Traps"
+    },
+    "desc": {
+      "zh": "使友军不会触发你放置的陷阱。通常设置为1.0来启用。",
+      "en": "Prevents allies from triggering your traps. Typically set to 1.0 to enable."
+    },
+    "type": "number",
+    "defaultValue": 1
+  },
+  "AddStatusToBasicAttack/DistanceBonusDamage/stacks": {
+    "title": {
+      "zh": "普攻距离伤害加成",
+      "en": "Basic Attack Distance Bonus Damage"
+    },
+    "desc": {
+      "zh": "普攻每超过最小距离一格，增加的伤害点数。参考值：1.0。",
+      "en": "Damage points added for each tile the basic attack travels beyond the minimum range. Seen value: 1.0."
+    },
+    "type": "number",
+    "defaultValue": 1
+  },
+  "AddStatusToBasicAttack/DistanceBonusDamage/min_range": {
+    "title": {
+      "zh": "普攻距离伤害：最小距离",
+      "en": "Basic Attack Distance Bonus: Min Range"
+    },
+    "desc": {
+      "zh": "开始计算距离伤害加成的最小距离。参考值：1.0, 3.0。",
+      "en": "The minimum range from which to start calculating the distance damage bonus. Seen values: 1.0, 3.0."
+    },
+    "type": "number",
+    "defaultValue": 1
+  },
+  "RangedTrueShot": {
+    "title": {
+      "zh": "远程真伤",
+      "en": "Ranged True Shot"
+    },
+    "desc": {
+      "zh": "使你的远程攻击不会失手。通常设置为1.0来启用。",
+      "en": "Makes your ranged attacks never miss. Typically set to 1.0 to enable."
+    },
+    "type": "number",
+    "defaultValue": 1
+  },
+  "AddAllyNeighborsToAttackRange": {
+    "title": {
+      "zh": "将友军邻近格加入攻击范围",
+      "en": "Add Ally Neighbors to Attack Range"
+    },
+    "desc": {
+      "zh": "允许你的普攻可以目标友军邻近的地块。通常设置为1.0来启用。",
+      "en": "Allows your basic attack to target tiles adjacent to allies. Typically set to 1.0 to enable."
+    },
+    "type": "number",
+    "defaultValue": 1
+  },
+  "AddAllyNeighborsToAbilityRange": {
+    "title": {
+      "zh": "将友军邻近格加入技能范围",
+      "en": "Add Ally Neighbors to Ability Range"
+    },
+    "desc": {
+      "zh": "允许你的技能可以目标友军邻近的地块。通常设置为1.0来启用。",
+      "en": "Allows your abilities to target tiles adjacent to allies. Typically set to 1.0 to enable."
+    },
+    "type": "number",
+    "defaultValue": 1
+  },
+  "MissChance": {
+    "title": {
+      "zh": "失手几率",
+      "en": "Miss Chance"
+    },
+    "desc": {
+      "zh": "增加攻击的失手几率（百分点）。参考值：25.0。",
+      "en": "Increases the chance for an attack to miss (percentage points). Seen value: 25.0."
+    },
+    "type": "number",
+    "defaultValue": 10
+  },
+  "ParasitesArentCursed": {
+    "title": {
+      "zh": "寄生生物非诅咒",
+      "en": "Parasites Aren't Cursed"
+    },
+    "desc": {
+      "zh": "使你装备的寄生生物物品可以被自由卸下。通常设置为1.0来启用。",
+      "en": "Allows parasite items you equip to be unequipped freely. Typically set to 1.0 to enable."
+    },
+    "type": "number",
+    "defaultValue": 1
+  },
+  "AddStatusToFirstBasicAttack/Charmed": {
+    "title": {
+      "zh": "首次普攻附加魅惑",
+      "en": "Add Charm to First Basic Attack"
+    },
+    "desc": {
+      "zh": "每场战斗的第一次普攻附加魅惑效果的层数。参考值：5.0。",
+      "en": "Adds stacks of Charm to the first basic attack of each battle. Seen value: 5.0."
+    },
+    "type": "number",
+    "defaultValue": 5
+  },
+  "AddStatusToBasicAttack/Charmed": {
+    "title": {
+      "zh": "普攻附加魅惑（几率）",
+      "en": "Add Charm to Basic Attack (Chance)"
+    },
+    "desc": {
+      "zh": "为普攻附加魅惑效果，可以是一个[层数, 几率]的数组。参考值：[1.0, 0.25]。",
+      "en": "Adds a chance to apply Charm with basic attacks. Can be a [stacks, chance] array. Seen value: [1.0, 0.25]."
+    },
+    "type": "string",
+    "defaultValue": "[1.0, 0.25]"
+  },
+  "AddStatusToBasicAttackWithCooldown/CharmedForceAttack": {
+    "title": {
+      "zh": "普攻（带冷却）强制攻击",
+      "en": "Basic Attack (CD) Force Attack"
+    },
+    "desc": {
+      "zh": "使普攻命中后强制目标攻击另一敌人，此效果有冷却。通常设置为1.0来启用。",
+      "en": "Makes the basic attack force the target to attack another enemy, this effect has a cooldown. Typically set to 1.0 to enable."
+    },
+    "type": "number",
+    "defaultValue": 1
+  },
+  "AddStatusToBasicAttack/DamageOrHealConditionally": {
+    "title": {
+      "zh": "普攻条件性伤害或治疗",
+      "en": "Basic Attack Conditional Damage/Heal"
+    },
+    "desc": {
+      "zh": "使普攻能对敌人造成伤害，对友军进行治疗。通常设置为1.0来启用。",
+      "en": "Allows the basic attack to damage enemies and heal allies. Typically set to 1.0 to enable."
+    },
+    "type": "number",
+    "defaultValue": 1
+  },
+  "StatusAlliesOnBattleStart/EquipTemporaryItem": {
+    "title": {
+      "zh": "战斗开始时为友军装备物品",
+      "en": "Equip Item for Allies on Battle Start"
+    },
+    "desc": {
+      "zh": "战斗开始时，为所有友军装备一个指定的临时物品。参考值：'SleepDart', 'SleepDart2'。",
+      "en": "At the start of battle, equips all allies with a specified temporary item. Seen values: 'SleepDart', 'SleepDart2'."
+    },
+    "type": "string",
+    "defaultValue": "SleepDart"
+  },
+  "ConsumablesMeleeRange": {
+    "title": {
+      "zh": "消耗品近战范围",
+      "en": "Consumables Melee Range"
+    },
+    "desc": {
+      "zh": "允许你在近战范围内对其他单位使用消耗品。通常设置为1.0来启用。",
+      "en": "Allows you to use consumables on other units within melee range. Typically set to 1.0 to enable."
+    },
+    "type": "number",
+    "defaultValue": 1
+  },
+  "BonusFoodEachBattle": {
+    "title": {
+      "zh": "每场战斗额外食物",
+      "en": "Bonus Food Each Battle"
+    },
+    "desc": {
+      "zh": "战斗结束后额外储存的食物数量。参考值：2.0, 20.0。",
+      "en": "Amount of extra food to store at the end of each battle. Seen values: 2.0, 20.0."
+    },
+    "type": "number",
+    "defaultValue": 2
+  },
+  "StatusEachTurnEndPerEnemyKill/ObjectOnHitCharacter/stacks": {
+    "title": {
+      "zh": "回合结束根据击杀生成：数量",
+      "en": "Spawn on Turn End per Kill: Stacks"
+    },
+    "desc": {
+      "zh": "回合结束时，根据本场战斗的击杀数，每个击杀生成N个物体。参考值：1.0。",
+      "en": "At turn end, for each kill this battle, spawn N objects. Seen value: 1.0."
+    },
+    "type": "number",
+    "defaultValue": 1
+  },
+  "StatusEachTurnEndPerEnemyKill/ObjectOnHitCharacter/object": {
+    "title": {
+      "zh": "回合结束根据击杀生成：物体",
+      "en": "Spawn on Turn End per Kill: Object"
+    },
+    "desc": {
+      "zh": "回合结束时，根据本场战斗的击杀数生成的物体ID。参考值：'CharmedFlea'。",
+      "en": "The ID of the object to spawn at turn end, based on kills this battle. Seen value: 'CharmedFlea'."
+    },
+    "type": "string",
+    "defaultValue": "CharmedFlea"
+  },
+  "StatusEachTurnEnd/ObjectOnHitCharacter/stacks": {
+    "title": {
+      "zh": "回合结束时生成：数量",
+      "en": "Spawn on Turn End: Stacks"
+    },
+    "desc": {
+      "zh": "回合结束时，固定生成的物体数量。参考值：2.0。",
+      "en": "Fixed number of objects to spawn at turn end. Seen value: 2.0."
+    },
+    "type": "number",
+    "defaultValue": 1
+  },
+  "StatusEachTurnEnd/ObjectOnHitCharacter/object": {
+    "title": {
+      "zh": "回合结束时生成：物体",
+      "en": "Spawn on Turn End: Object"
+    },
+    "desc": {
+      "zh": "回合结束时，固定生成的物体ID。参考值：'CharmedFlea'。",
+      "en": "The ID of the object to spawn at turn end. Seen value: 'CharmedFlea'."
+    },
+    "type": "string",
+    "defaultValue": "CharmedFlea"
+  },
+  "StatusOnBattleEndIfKillThresholdMet/kills": {
+    "title": {
+      "zh": "战斗结束击杀阈值",
+      "en": "Kill Threshold on Battle End"
+    },
+    "desc": {
+      "zh": "战斗结束时，需要达到的最低击杀数才能触发效果。参考值：3.0。",
+      "en": "The minimum number of kills required at the end of battle to trigger the effect. Seen value: 3.0."
+    },
+    "type": "number",
+    "defaultValue": 3
+  },
+  "StatusOnBattleEndIfKillThresholdMet/statuses/PermanentDexterity": {
+    "title": {
+      "zh": "满足条件时获得永久敏捷",
+      "en": "Gain Permanent Dexterity on Condition"
+    },
+    "desc": {
+      "zh": "满足战斗结束击杀阈值后，获得的永久敏捷点数。参考值：1.0。",
+      "en": "Permanent dexterity points gained after meeting the kill threshold at battle end. Seen value: 1.0."
+    },
+    "type": "number",
+    "defaultValue": 1
+  },
+  "StatusOnBattleEndIfKillThresholdMet/statuses/FindItemFromPool": {
+    "title": {
+      "zh": "满足条件时从池中寻找物品",
+      "en": "Find Item from Pool on Condition"
+    },
+    "desc": {
+      "zh": "满足战斗结束击杀阈值后，从指定的物品池中寻找一个物品。参考值：'consumables', 'chapter'。",
+      "en": "After meeting the kill threshold, find an item from the specified pool. Seen values: 'consumables', 'chapter'."
+    },
+    "type": "string",
+    "defaultValue": "consumables"
+  },
+  "BonusRangeBasedOnDex": {
+    "title": {
+      "zh": "基于敏捷的射程加成",
+      "en": "Bonus Range Based on Dexterity"
+    },
+    "desc": {
+      "zh": "每N点敏捷，获得1点射程加成。参考值：5.0。",
+      "en": "For every N points of Dexterity, gain +1 range. Seen value: 5.0."
+    },
+    "type": "number",
+    "defaultValue": 5
+  },
+  "BonusHealthRegenBasedOnDex": {
+    "title": {
+      "zh": "基于敏捷的生命再生",
+      "en": "Bonus Health Regen Based on Dexterity"
+    },
+    "desc": {
+      "zh": "每N点敏捷，获得1点生命再生。参考值：5.0。",
+      "en": "For every N points of Dexterity, gain +1 health regeneration. Seen value: 5.0."
+    },
+    "type": "number",
+    "defaultValue": 5
+  },
+  "AlphaTurns": {
+    "title": {
+      "zh": "Alpha回合",
+      "en": "Alpha Turns"
+    },
+    "desc": {
+      "zh": "在每轮开始时获得额外的回合。负值可能代表其他逻辑。参考值：-1.0。",
+      "en": "Gain extra turns at the start of each round. A negative value may imply other logic. Seen value: -1.0."
+    },
+    "type": "number",
+    "defaultValue": 1
+  },
+  "StatusEveryXTurnBegins/turns": {
+    "title": {
+      "zh": "每N回合触发：回合数",
+      "en": "Trigger Every N Turns: Turns"
+    },
+    "desc": {
+      "zh": "设置触发周期。参考值：3.0, 2.0。",
+      "en": "Sets the trigger period. Seen values: 3.0, 2.0."
+    },
+    "type": "number",
+    "defaultValue": 3
+  },
+  "StatusEveryXTurnBegins/DivineShield": {
+    "title": {
+      "zh": "每N回合触发：神圣护盾",
+      "en": "Trigger Every N Turns: Divine Shield"
+    },
+    "desc": {
+      "zh": "周期性获得的神圣护盾层数。参考值：1.0。",
+      "en": "Number of Divine Shield stacks gained periodically. Seen value: 1.0."
+    },
+    "type": "number",
+    "defaultValue": 1
+  },
+  "AddStatusToBasicAttack/SplashDamage": {
+    "title": {
+      "zh": "普攻附加溅射伤害",
+      "en": "Add Splash Damage to Basic Attack"
+    },
+    "desc": {
+      "zh": "为普攻附加溅射伤害。数值为伤害量。参考值：2.0。",
+      "en": "Adds splash damage to the basic attack. The value is the damage amount. Seen value: 2.0."
+    },
+    "type": "number",
+    "defaultValue": 2
+  },
+  "AddStatusToBasicAttack/BigSplashDamage": {
+    "title": {
+      "zh": "普攻附加大范围溅射伤害",
+      "en": "Add Big Splash Damage to Basic Attack"
+    },
+    "desc": {
+      "zh": "为普攻附加大范围的溅射伤害。数值为伤害量。参考值：2.0。",
+      "en": "Adds wide-area splash damage to the basic attack. The value is the damage amount. Seen value: 2.0."
+    },
+    "type": "number",
+    "defaultValue": 2
+  },
+  "AddElementsToBasicAttack": {
+    "title": {
+      "zh": "为普攻附加元素",
+      "en": "Add Elements to Basic Attack"
+    },
+    "desc": {
+      "zh": "为普攻附加元素属性。参考值：'Fire', 'Electric', 'Ice'。",
+      "en": "Adds elemental properties to the basic attack. Seen values: 'Fire', 'Electric', 'Ice'."
+    },
+    "type": "string",
+    "defaultValue": "Fire"
+  },
+  "AddSelfStatusToBasicAttack/RandomMagicMissile": {
+    "title": {
+      "zh": "普攻时对自己施放随机魔弹",
+      "en": "Self-Cast Random Magic Missile on Basic Attack"
+    },
+    "desc": {
+      "zh": "使用普攻时，对自己发射随机数量的魔法飞弹（火花）。通常设置为1.0。",
+      "en": "When using basic attack, fire a random number of magic missiles (Sparkles) at oneself. Usually set to 1.0."
+    },
+    "type": "number",
+    "defaultValue": 1
+  },
+  "StatusOnTurnEndIfManaExact/mana": {
+    "title": {
+      "zh": "回合结束法力精确时触发：法力值",
+      "en": "Trigger on Turn End if Mana Exact: Mana Value"
+    },
+    "desc": {
+      "zh": "回合结束时，法力值需要精确等于此数值才能触发效果。参考值：0.0, 5.0, 2.0, 4.0。",
+      "en": "The exact mana value required at turn end to trigger the effect. Seen values: 0.0, 5.0, 2.0, 4.0."
+    },
+    "type": "number",
+    "defaultValue": 0
+  },
+  "StatusOnTurnEndIfManaExact/FreeSpell": {
+    "title": {
+      "zh": "回合结束法力精确时触发：免费法术",
+      "en": "Trigger on Turn End if Mana Exact: Free Spell"
+    },
+    "desc": {
+      "zh": "满足条件时，获得的免费法术次数。参考值：1.0。",
+      "en": "Number of free spell casts gained when the condition is met. Seen value: 1.0."
+    },
+    "type": "number",
+    "defaultValue": 1
+  },
+  "StatusOnTurnEndIfManaExact/SpellDamageUp": {
+    "title": {
+      "zh": "回合结束法力精确时触发：法伤提升",
+      "en": "Trigger on Turn End if Mana Exact: Spell Damage Up"
+    },
+    "desc": {
+      "zh": "满足条件时，获得的法术伤害提升。参考值：1.0。",
+      "en": "Spell damage bonus gained when the condition is met. Seen value: 1.0."
+    },
+    "type": "number",
+    "defaultValue": 1
+  },
+  "DeathChill": {
+    "title": {
+      "zh": "死亡寒冰",
+      "en": "Death Chill"
+    },
+    "desc": {
+      "zh": "被击倒时，在地图上触发寒冰效果。通常设置为1.0来启用。",
+      "en": "Triggers a chill effect on the map when downed. Typically set to 1.0 to enable."
+    },
+    "type": "number",
+    "defaultValue": 1
+  },
+  "AddStartingMana": {
+    "title": {
+      "zh": "增加初始法力",
+      "en": "Add Starting Mana"
+    },
+    "desc": {
+      "zh": "战斗开始时增加的法力值。参考值：5.0, 20.0。",
+      "en": "Amount of mana added at the start of battle. Seen values: 5.0, 20.0."
+    },
+    "type": "number",
+    "defaultValue": 5
+  },
+  "AddManaRegen": {
+    "title": {
+      "zh": "增加法力恢复",
+      "en": "Add Mana Regen"
+    },
+    "desc": {
+      "zh": "增加每回合的法力恢复量。参考值：5.0。",
+      "en": "Increases mana regeneration per turn. Seen value: 5.0."
+    },
+    "type": "number",
+    "defaultValue": 5
+  },
+  "StatusEachTurnEnd/EmptyMana": {
+    "title": {
+      "zh": "回合结束时清空法力",
+      "en": "Empty Mana at Turn End"
+    },
+    "desc": {
+      "zh": "在每回合结束时将法力值清零。通常设置为1.0来启用。",
+      "en": "Resets mana to zero at the end of each turn. Typically set to 1.0 to enable."
+    },
+    "type": "number",
+    "defaultValue": 1
+  },
+  "EnergyStorm": {
+    "title": {
+      "zh": "能量风暴",
+      "en": "Energy Storm"
+    },
+    "desc": {
+      "zh": "每施放N个法术，下一个法术会施放两次。可设置为数字或对象 `{'period': 3.0, 'cycle_start': 2.0}`",
+      "en": "Every Nth spell cast, the next spell is cast twice. Can be a number or an object `{'period': 3.0, 'cycle_start': 2.0}`"
+    },
+    "type": "string",
+    "defaultValue": "3"
+  },
+  "InnateElement": {
+    "title": {
+      "zh": "固有元素",
+      "en": "Innate Element"
+    },
+    "desc": {
+      "zh": "为角色赋予一个固有的元素属性。参考值：'Fire', 'Ice', 'Electric'。",
+      "en": "Grants the character an innate elemental property. Seen values: 'Fire', 'Ice', 'Electric'."
+    },
+    "type": "string",
+    "defaultValue": "Fire"
+  },
+  "ElementImmune": {
+    "title": {
+      "zh": "元素免疫",
+      "en": "Element Immune"
+    },
+    "desc": {
+      "zh": "使角色免疫指定的元素伤害。参考值：'Fire', 'Ice', 'Electric'。",
+      "en": "Makes the character immune to specified elemental damage. Seen values: 'Fire', 'Ice', 'Electric'."
+    },
+    "type": "string",
+    "defaultValue": "Fire"
+  },
+  "FreezePiercing": {
+    "title": {
+      "zh": "冰冻穿透",
+      "en": "Freeze Piercing"
+    },
+    "desc": {
+      "zh": "允许你的攻击可以伤害被冰冻的单位。通常设置为1.0来启用。",
+      "en": "Allows your attacks to damage frozen units. Typically set to 1.0 to enable."
+    },
+    "type": "number",
+    "defaultValue": 1
+  },
+  "StatusAfterCastSpell/TempSpellDamageUp": {
+    "title": {
+      "zh": "施法后获得临时法伤",
+      "en": "Gain Temp Spell Damage After Cast"
+    },
+    "desc": {
+      "zh": "施放法术后，在本回合内获得的临时法术伤害加成。参考值：1.0。",
+      "en": "Temporary spell damage bonus gained for the rest of the turn after casting a spell. Seen value: 1.0."
+    },
+    "type": "number",
+    "defaultValue": 1
+  },
+  "StatusAfterCastSpell/TempDamageUp": {
+    "title": {
+      "zh": "施法后获得临时伤害",
+      "en": "Gain Temp Damage After Cast"
+    },
+    "desc": {
+      "zh": "施放法术后，在本回合内获得的临时伤害加成。参考值：1.0。",
+      "en": "Temporary damage bonus gained for the rest of the turn after casting a spell. Seen value: 1.0."
+    },
+    "type": "number",
+    "defaultValue": 1
+  },
+  "ConjureCastSpellsForAllies": {
+    "title": {
+      "zh": "为友军召唤所施放的法术",
+      "en": "Conjure Cast Spells for Allies"
+    },
+    "desc": {
+      "zh": "当你施法时，所有友军都会获得该法术作为额外能力。1.0为原版, 2.0为升级版。",
+      "en": "When you cast a spell, all allies gain that spell as a bonus ability. 1.0 for original, 2.0 for upgraded version."
+    },
+    "type": "number",
+    "defaultValue": 1
+  },
+  "LightningAspectCharge": {
+    "title": {
+      "zh": "闪电充能",
+      "en": "Lightning Aspect Charge"
+    },
+    "desc": {
+      "zh": "造成电伤害时获得充能。0.0为固定+1充能, 1.0为每点伤害+1充能。",
+      "en": "Gain Charge when dealing Electric damage. 0.0 for a flat +1 Charge, 1.0 for +1 Charge per point of damage."
+    },
+    "type": "number",
+    "defaultValue": 0
+  },
+  "IncreaseSpellRange": {
+    "title": {
+      "zh": "增加法术范围",
+      "en": "Increase Spell Range"
+    },
+    "desc": {
+      "zh": "增加指向地块的法术的施法距离。参考值：3.0, 5.0。",
+      "en": "Increases the cast range of tile-targeted spells. Seen values: 3.0, 5.0."
+    },
+    "type": "number",
+    "defaultValue": 3
+  },
+  "StatusEachTurnEndForEachTurn/RandomMagicMissile": {
+    "title": {
+      "zh": "每回合结束根据回合数触发",
+      "en": "Trigger on Turn End per Turn Count"
+    },
+    "desc": {
+      "zh": "在回合结束时，根据已进行的回合数，触发N次效果（如随机魔弹）。通常设置为1.0。",
+      "en": "At the end of the turn, triggers an effect N times based on the number of turns taken. Usually set to 1.0."
+    },
+    "type": "number",
+    "defaultValue": 1
+  },
+  "StatusEachTurnEnd/KineticSpikes": {
+    "title": {
+      "zh": "回合结束时获得动能尖刺",
+      "en": "Gain Kinetic Spikes at Turn End"
+    },
+    "desc": {
+      "zh": "每回合结束时获得的动能尖刺层数。参考值：1.0。",
+      "en": "Number of Kinetic Spikes stacks gained at the end of each turn. Seen value: 1.0."
+    },
+    "type": "number",
+    "defaultValue": 1
+  },
+  "ElementalManaCostReduction/element": {
+    "title": {
+      "zh": "元素法力消耗降低：元素",
+      "en": "Elemental Mana Cost Reduction: Element"
+    },
+    "desc": {
+      "zh": "指定哪些元素的法术可以享受法力消耗降低。可以是单个元素或数组。",
+      "en": "Specifies which elemental spells receive a mana cost reduction. Can be a single element or an array."
+    },
+    "type": "string",
+    "defaultValue": "Gravity"
+  },
+  "ElementalManaCostReduction/reduction": {
+    "title": {
+      "zh": "元素法力消耗降低：数值",
+      "en": "Elemental Mana Cost Reduction: Amount"
+    },
+    "desc": {
+      "zh": "降低指定元素法术的法力消耗。参考值：2.0。",
+      "en": "Reduces the mana cost of specified elemental spells. Seen value: 2.0."
+    },
+    "type": "number",
+    "defaultValue": 1
+  },
+  "StatusWhenAllySpendsMana/OneUseSpellDamageUp": {
+    "title": {
+      "zh": "友军耗蓝时获得一次性法伤",
+      "en": "Gain One-Use Spell Damage on Ally Mana Spend"
+    },
+    "desc": {
+      "zh": "当友军消耗法力时，你下一次法术获得的伤害加成。参考值：2.0。",
+      "en": "Damage bonus for your next spell when an ally spends mana. Seen value: 2.0."
+    },
+    "type": "number",
+    "defaultValue": 2
+  },
+  "StatusWhenAllySpendsMana/ManaGain": {
+    "title": {
+      "zh": "友军耗蓝时获得法力",
+      "en": "Gain Mana on Ally Mana Spend"
+    },
+    "desc": {
+      "zh": "当友军消耗法力时，你获得的法力值。参考值：2.0。",
+      "en": "Mana gained when an ally spends mana. Seen value: 2.0."
+    },
+    "type": "number",
+    "defaultValue": 2
+  },
+  "StatusOnTurnEndIfManaExact/Temporary/status": {
+    "title": {
+      "zh": "精确法力触发：临时状态",
+      "en": "Exact Mana Trigger: Temp Status"
+    },
+    "desc": {
+      "zh": "满足条件时，获得的临时状态的名称。参考值：'KineticSpikes', 'DamageUp'。",
+      "en": "The name of the temporary status gained when conditions are met. Seen values: 'KineticSpikes', 'DamageUp'."
+    },
+    "type": "string",
+    "defaultValue": "KineticSpikes"
+  },
+  "StatusOnTurnEndIfManaExact/Temporary/stacks": {
+    "title": {
+      "zh": "精确法力触发：临时层数",
+      "en": "Exact Mana Trigger: Temp Stacks"
+    },
+    "desc": {
+      "zh": "满足条件时，获得的临时状态的层数。参考值：5.0。",
+      "en": "The number of temporary status stacks gained when conditions are met. Seen value: 5.0."
+    },
+    "type": "number",
+    "defaultValue": 5
+  },
+  "StatusOnTurnEndIfManaExact/Temporary/turns": {
+    "title": {
+      "zh": "精确法力触发：持续回合",
+      "en": "Exact Mana Trigger: Duration"
+    },
+    "desc": {
+      "zh": "满足条件时，获得的临时状态的持续回合数。参考值：1.0。",
+      "en": "The duration in turns for the temporary status gained. Seen value: 1.0."
+    },
+    "type": "number",
+    "defaultValue": 1
+  },
+  "StatusOnTurnEndIfManaExact/Temporary/expires_on_end_turn": {
+    "title": {
+      "zh": "精确法力触发：回合末失效",
+      "en": "Exact Mana Trigger: Expires on End Turn"
+    },
+    "desc": {
+      "zh": "设置临时状态是否在你的回合结束时失效。通常设置为 true。",
+      "en": "Determines if the temporary status expires at the end of your turn. Usually set to true."
+    },
+    "type": "string",
+    "defaultValue": "true"
+  },
+  "StatusOnTurnEndIfManaExact/Shield": {
+    "title": {
+      "zh": "精确法力触发：护盾",
+      "en": "Exact Mana Trigger: Shield"
+    },
+    "desc": {
+      "zh": "满足条件时，获得的护盾值。参考值：5.0。",
+      "en": "Shield value gained when the condition is met. Seen value: 5.0."
+    },
+    "type": "number",
+    "defaultValue": 5
+  },
+  "StatusOnTurnEndIfManaExact/HealthGain": {
+    "title": {
+      "zh": "精确法力触发：生命恢复",
+      "en": "Exact Mana Trigger: Health Gain"
+    },
+    "desc": {
+      "zh": "满足条件时，恢复的生命值。参考值：5.0。",
+      "en": "Health restored when the condition is met. Seen value: 5.0."
+    },
+    "type": "number",
+    "defaultValue": 5
+  },
+  "AllyManaRegenAura/stacks": {
+    "title": {
+      "zh": "友军法力恢复光环：层数",
+      "en": "Ally Mana Regen Aura: Stacks"
+    },
+    "desc": {
+      "zh": "为友军提供的法力恢复量。参考值：1.0。",
+      "en": "Amount of mana regeneration provided to allies. Seen value: 1.0."
+    },
+    "type": "number",
+    "defaultValue": 1
+  },
+  "AllyManaRegenAura/range": {
+    "title": {
+      "zh": "友军法力恢复光环：范围",
+      "en": "Ally Mana Regen Aura: Range"
+    },
+    "desc": {
+      "zh": "光环的范围。通常是'global'。",
+      "en": "The range of the aura. Usually 'global'."
+    },
+    "type": "string",
+    "defaultValue": "global"
+  },
+  "StatusAllyWhenAllySpendsMana/threshold": {
+    "title": {
+      "zh": "友军耗蓝触发：阈值",
+      "en": "Ally Mana Spend Trigger: Threshold"
+    },
+    "desc": {
+      "zh": "友军需要消耗的最低法力值才能触发效果。参考值：7.0。",
+      "en": "The minimum mana an ally must spend to trigger the effect. Seen value: 7.0."
+    },
+    "type": "number",
+    "defaultValue": 7
+  },
+  "StatusAllyWhenAllySpendsMana/AllStatsUp": {
+    "title": {
+      "zh": "友军耗蓝触发：全属性提升",
+      "en": "Ally Mana Spend Trigger: All Stats Up"
+    },
+    "desc": {
+      "zh": "友军满足耗蓝条件时，为其提供的全属性提升。参考值：1.0。",
+      "en": "All stats up bonus granted to an ally when they meet the mana spend condition. Seen value: 1.0."
+    },
+    "type": "number",
+    "defaultValue": 1
+  },
+  "StatusAlliesOnSpendMana/ManaGain": {
+    "title": {
+      "zh": "施法时为友军回蓝",
+      "en": "Mana Gain for Allies on Cast"
+    },
+    "desc": {
+      "zh": "当你消耗法力时，为每个友军恢复的法力值。参考值：1.0。",
+      "en": "Mana restored to each ally when you spend mana. Seen value: 1.0."
+    },
+    "type": "number",
+    "defaultValue": 1
+  },
+  "StatusOnTurnEndIfCastNSpells/spells": {
+    "title": {
+      "zh": "回合结束施法N次触发：次数",
+      "en": "Trigger on Turn End if Cast N Spells: Count"
+    },
+    "desc": {
+      "zh": "回合结束时，需要精确施放的法术次数才能触发效果。参考值：1.0, 2.0。",
+      "en": "The exact number of spells that must be cast to trigger the effect at turn end. Seen values: 1.0, 2.0."
+    },
+    "type": "number",
+    "defaultValue": 1
+  },
+  "StatusOnTurnEndIfCastNSpells/DoubleCastSpell": {
+    "title": {
+      "zh": "回合结束施法N次触发：双重施法",
+      "en": "Trigger on Turn End if Cast N Spells: Double Cast"
+    },
+    "desc": {
+      "zh": "满足条件时，获得的双重施法次数。参考值：1.0, 2.0。",
+      "en": "Number of double casts gained when the condition is met. Seen values: 1.0, 2.0."
+    },
+    "type": "number",
+    "defaultValue": 1
+  },
+  "StatusOnTurnEndIfManaExact/IntelligenceUp": {
+    "title": {
+      "zh": "精确法力触发：智力提升",
+      "en": "Exact Mana Trigger: Intelligence Up"
+    },
+    "desc": {
+      "zh": "满足条件时，获得的智力点数。参考值：1.0。",
+      "en": "Intelligence points gained when the condition is met. Seen value: 1.0."
+    },
+    "type": "number",
+    "defaultValue": 1
+  },
+  "StatusOnTurnEndIfManaExact/KineticSpikes": {
+    "title": {
+      "zh": "精确法力触发：动能尖刺",
+      "en": "Exact Mana Trigger: Kinetic Spikes"
+    },
+    "desc": {
+      "zh": "满足条件时，获得的动能尖刺层数。参考值：1.0。",
+      "en": "Kinetic Spikes stacks gained when the condition is met. Seen value: 1.0."
+    },
+    "type": "number",
+    "defaultValue": 1
+  },
+  "StatusOnTurnEndIfManaExact/DivineShield": {
+    "title": {
+      "zh": "精确法力触发：神圣护盾",
+      "en": "Exact Mana Trigger: Divine Shield"
+    },
+    "desc": {
+      "zh": "满足条件时，获得的神圣护盾层数。参考值：1.0。",
+      "en": "Divine Shield stacks gained when the condition is met. Seen value: 1.0."
+    },
+    "type": "number",
+    "defaultValue": 1
+  },
+  "ShareHealthRegen": {
+    "title": {
+      "zh": "共享生命再生",
+      "en": "Share Health Regen"
+    },
+    "desc": {
+      "zh": "将你的生命再生效果分享给所有友军。通常设置为1.0来启用。",
+      "en": "Shares your health regeneration effect with all allies. Typically set to 1.0 to enable."
+    },
+    "type": "number",
+    "defaultValue": 1
+  },
+  "AllyUncappedHPAura": {
+    "title": {
+      "zh": "友军生命无上限光环",
+      "en": "Ally Uncapped HP Aura"
+    },
+    "desc": {
+      "zh": "使所有友军的生命值可以超过上限。通常设置为1.0来启用。",
+      "en": "Allows all allies' HP to exceed their maximum. Typically set to 1.0 to enable."
+    },
+    "type": "number",
+    "defaultValue": 1
+  },
+  "BoostHeals": {
+    "title": {
+      "zh": "提升治疗效果",
+      "en": "Boost Heals"
+    },
+    "desc": {
+      "zh": "增加你所有治疗技能的治疗量。参考值：2.0, 4.0。",
+      "en": "Increases the amount of healing done by all your healing abilities. Seen values: 2.0, 4.0."
+    },
+    "type": "number",
+    "defaultValue": 1
+  },
+  "HealAtStart": {
+    "title": {
+      "zh": "开局治疗",
+      "en": "Heal at Start"
+    },
+    "desc": {
+      "zh": "在战斗开始时恢复生命。输入一个带%的字符串，如'100%'。",
+      "en": "Restores health at the start of battle. Input as a string with '%', e.g., '100%'."
+    },
+    "type": "string",
+    "defaultValue": "100%"
+  },
+  "HealDamagesEnemies": {
+    "title": {
+      "zh": "治疗伤害敌人",
+      "en": "Heal Damages Enemies"
+    },
+    "desc": {
+      "zh": "使你的治疗技能可以对敌人造成伤害。通常设置为1.0来启用。",
+      "en": "Allows your healing abilities to damage enemies. Typically set to 1.0 to enable."
+    },
+    "type": "number",
+    "defaultValue": 1
+  },
+  "IncreaseHealingSpellRange": {
+    "title": {
+      "zh": "增加治疗法术范围",
+      "en": "Increase Healing Spell Range"
+    },
+    "desc": {
+      "zh": "增加指向地块的治疗法术的施法距离。参考值：2.0。",
+      "en": "Increases the cast range of tile-targeted healing spells. Seen value: 2.0."
+    },
+    "type": "number",
+    "defaultValue": 2
+  },
+  "HolyDamageMultiplierBonus": {
+    "title": {
+      "zh": "神圣伤害倍率加成",
+      "en": "Holy Damage Multiplier Bonus"
+    },
+    "desc": {
+      "zh": "为你造成的神圣伤害提供一个额外的乘数。1.0代表伤害翻倍。参考值：1.0。",
+      "en": "Provides an additional multiplier for Holy damage you deal. 1.0 means double damage. Seen value: 1.0."
+    },
+    "type": "number",
+    "defaultValue": 1
+  },
+  "HealsAlsoRegenMana": {
+    "title": {
+      "zh": "治疗同时恢复法力",
+      "en": "Heals Also Regen Mana"
+    },
+    "desc": {
+      "zh": "当你治疗一个单位时，也为其恢复法力。可以是固定数值或百分比字符串。参考值：2.0, '50%'。",
+      "en": "When you heal a unit, also restore its mana. Can be a fixed number or a percentage string. Seen values: 2.0, '50%'."
+    },
+    "type": "string",
+    "defaultValue": "2"
+  },
+  "OverhealGainsBothShield": {
+    "title": {
+      "zh": "过量治疗双方获盾",
+      "en": "Overheal Gains Both Shield"
+    },
+    "desc": {
+      "zh": "当你对一个单位造成过量治疗时，你和目标都获得护盾。参考值：1.0, 2.0。",
+      "en": "When you overheal a unit, both you and the target gain a shield. Seen values: 1.0, 2.0."
+    },
+    "type": "number",
+    "defaultValue": 1
+  },
+  "SharePickups": {
+    "title": {
+      "zh": "共享拾取物",
+      "en": "Share Pickups"
+    },
+    "desc": {
+      "zh": "当你拾取一个非金币物品时，所有友军也获得其效果。通常设置为1.0来启用。",
+      "en": "When you pick up a non-coin item, all allies also gain its effects. Typically set to 1.0 to enable."
+    },
+    "type": "number",
+    "defaultValue": 1
+  },
+  "Empath": {
+    "title": {
+      "zh": "共情（自我治疗）",
+      "en": "Empath (Self Heal)"
+    },
+    "desc": {
+      "zh": "当你治疗其他单位时，为自己恢复一定比例的治疗量。输入一个带%的字符串。参考值：'50%', '100%'。",
+      "en": "When you heal another unit, you heal yourself for a percentage of that amount. Input as a string with '%'. Seen values: '50%', '100%'."
+    },
+    "type": "string",
+    "defaultValue": "50%"
+  },
+  "StatusAlliesOnKill/AllStatsUp": {
+    "title": {
+      "zh": "击杀时为友军加全属性",
+      "en": "All Stats Up for Allies on Kill"
+    },
+    "desc": {
+      "zh": "当你击杀一个单位时，为所有友军提供全属性提升。参考值：1.0。",
+      "en": "When you kill a unit, grant all allies an All Stats Up buff. Seen value: 1.0."
+    },
+    "type": "number",
+    "defaultValue": 1
+  },
+  "StatusOnKill/RefreshActPoints": {
+    "title": {
+      "zh": "击杀时刷新行动点",
+      "en": "Refresh Act Points on Kill"
+    },
+    "desc": {
+      "zh": "击杀单位时，刷新你的基础攻击次数。通常设置为1.0。",
+      "en": "Refreshes your basic attack uses when you kill a unit. Usually set to 1.0."
+    },
+    "type": "number",
+    "defaultValue": 1
+  },
+  "StatusOnHeal/SpeedUp": {
+    "title": {
+      "zh": "治疗时获得速度",
+      "en": "Gain Speed on Heal"
+    },
+    "desc": {
+      "zh": "当你进行治疗时，获得的速度点数。参考值：2.0, 4.0。",
+      "en": "Speed points gained when you perform a heal. Seen values: 2.0, 4.0."
+    },
+    "type": "number",
+    "defaultValue": 2
+  },
+  "StatusOnHeal/RandomStatUp": {
+    "title": {
+      "zh": "治疗时获得随机属性",
+      "en": "Gain Random Stat on Heal"
+    },
+    "desc": {
+      "zh": "当你进行治疗时，获得的随机属性点数。参考值：1.0。",
+      "en": "Random stat points gained when you perform a heal. Seen value: 1.0."
+    },
+    "type": "number",
+    "defaultValue": 1
+  },
+  "StatusOnKillEnemy/DivineShield": {
+    "title": {
+      "zh": "击杀敌人时获得神圣护盾",
+      "en": "Gain Divine Shield on Enemy Kill"
+    },
+    "desc": {
+      "zh": "击杀一个敌人时获得的神圣护盾层数。参考值：1.0。",
+      "en": "Number of Divine Shield stacks gained when killing an enemy. Seen value: 1.0."
+    },
+    "type": "number",
+    "defaultValue": 1
+  },
+  "StatusOnKillEnemy/RefreshMovePoints": {
+    "title": {
+      "zh": "击杀敌人时刷新移动点",
+      "en": "Refresh Move Points on Enemy Kill"
+    },
+    "desc": {
+      "zh": "击杀一个敌人时，刷新你的移动次数。通常设置为1.0。",
+      "en": "Refreshes your movement uses when you kill an enemy. Usually set to 1.0."
+    },
+    "type": "number",
+    "defaultValue": 1
+  },
+  "HealsCanRevive": {
+    "title": {
+      "zh": "治疗可复活",
+      "en": "Heals Can Revive"
+    },
+    "desc": {
+      "zh": "使你的治疗技能可以复活被击倒的单位。数值是复活后恢复生命值的倍率。参考值：1.0, 3.0。",
+      "en": "Allows your healing abilities to revive downed units. The value is a multiplier for health restored on revival. Seen values: 1.0, 3.0."
+    },
+    "type": "number",
+    "defaultValue": 1
+  },
+  "SmiteEnemiesWhoKill/damage": {
+    "title": {
+      "zh": "惩击杀戮者：伤害",
+      "en": "Smite Killers: Damage"
+    },
+    "desc": {
+      "zh": "当一个敌人击倒任何单位时，对其造成的神圣伤害。参考值：10.0。",
+      "en": "Holy damage dealt to an enemy when it downs any unit. Seen value: 10.0."
+    },
+    "type": "number",
+    "defaultValue": 10
+  },
+  "SmiteEnemiesWhoKill/effects/Stun": {
+    "title": {
+      "zh": "惩击杀戮者：眩晕",
+      "en": "Smite Killers: Stun"
+    },
+    "desc": {
+      "zh": "惩击时附加的眩晕层数。参考值：1.0。",
+      "en": "Stun stacks applied on smite. Seen value: 1.0."
+    },
+    "type": "number",
+    "defaultValue": 1
+  },
+  "EnemiesGetPickupsKnockedOut": {
+    "title": {
+      "zh": "从敌人身上打出拾取物",
+      "en": "Knock Pickups from Enemies"
+    },
+    "desc": {
+      "zh": "当敌人受到技能伤害时，掉落的随机拾取物数量。参考值：1.0, 2.0。",
+      "en": "Number of random pickups dropped when an enemy takes ability damage. Seen values: 1.0, 2.0."
+    },
+    "type": "number",
+    "defaultValue": 1
+  },
+  "PassiveUntilGetKill/HolyDamageBlessing/damage_multiplier": {
+    "title": {
+      "zh": "杀戮前祝福：神圣伤害倍率",
+      "en": "Pre-Kill Blessing: Holy Damage Multiplier"
+    },
+    "desc": {
+      "zh": "在你造成首次击杀前，神圣伤害的倍率。参考值：2.0, 3.0。",
+      "en": "Multiplier for Holy damage before you get your first kill. Seen values: 2.0, 3.0."
+    },
+    "type": "number",
+    "defaultValue": 2
+  },
+  "PassiveUntilGetKill/HolyDamageBlessing/Burn": {
+    "title": {
+      "zh": "杀戮前祝福：燃烧",
+      "en": "Pre-Kill Blessing: Burn"
+    },
+    "desc": {
+      "zh": "在你造成首次击杀前，神圣伤害附加的燃烧层数。参考值：2.0, 3.0。",
+      "en": "Burn stacks applied by Holy damage before you get your first kill. Seen values: 2.0, 3.0."
+    },
+    "type": "number",
+    "defaultValue": 2
+  },
+  "StatusAlliesOnGainCoins/scaled": {
+    "title": {
+      "zh": "获得金币时友军状态(缩放)",
+      "en": "Ally Status on Gain Coins (Scaled)"
+    },
+    "desc": {
+      "zh": "设置友军获得的状态是否根据金币数量缩放。通常设置为 true。",
+      "en": "Determines if the status gained by allies scales with the number of coins. Usually set to true."
+    },
+    "type": "string",
+    "defaultValue": "true"
+  },
+  "StatusAlliesOnGainCoins/LuckUp": {
+    "title": {
+      "zh": "获得金币时友军获得幸运",
+      "en": "Allies Gain Luck on Coin Gain"
+    },
+    "desc": {
+      "zh": "当你获得金币时，友军获得的幸运点数。参考值：1.0。",
+      "en": "Luck points gained by allies when you gain coins. Seen value: 1.0."
+    },
+    "type": "number",
+    "defaultValue": 1
+  },
+  "StatusAlliesOnGainCoins/HealthGain": {
+    "title": {
+      "zh": "获得金币时友军恢复生命",
+      "en": "Allies Heal on Coin Gain"
+    },
+    "desc": {
+      "zh": "当你获得金币时，友军恢复的生命值。参考值：1.0。",
+      "en": "Health restored to allies when you gain coins. Seen value: 1.0."
+    },
+    "type": "number",
+    "defaultValue": 1
+  },
+  "StatusOnGainCoins/DivineShield": {
+    "title": {
+      "zh": "获得金币时获得神圣护盾",
+      "en": "Gain Divine Shield on Coin Gain"
+    },
+    "desc": {
+      "zh": "当你获得金币时，获得的神圣护盾层数。参考值：1.0。",
+      "en": "Number of Divine Shield stacks gained when you gain coins. Seen value: 1.0."
+    },
+    "type": "number",
+    "defaultValue": 1
+  },
+  "AddStatusToBasicAttack/Conditional_Ally/Cleanse": {
+    "title": {
+      "zh": "普攻(对友军)：净化",
+      "en": "Basic Attack (on Ally): Cleanse"
+    },
+    "desc": {
+      "zh": "当普攻目标是友军时，为其净化负面效果。通常设置为0.0。",
+      "en": "When the basic attack target is an ally, cleanse their debuffs. Usually set to 0.0."
+    },
+    "type": "number",
+    "defaultValue": 0
+  },
+  "AddStatusToBasicAttack/Conditional_Ally/AllStatsUp": {
+    "title": {
+      "zh": "普攻(对友军)：全属性提升(几率)",
+      "en": "Basic Attack (on Ally): All Stats Up (Chance)"
+    },
+    "desc": {
+      "zh": "当普攻目标是友军时，有几率提供全属性提升。可以是一个[层数, 几率]的数组。参考值：[1.0, 0.5]。",
+      "en": "When the basic attack target is an ally, chance to grant All Stats Up. Can be a [stacks, chance] array. Seen value: [1.0, 0.5]."
+    },
+    "type": "string",
+    "defaultValue": "[1.0, 0.5]"
+  },
+  "AddStatusToBasicAttack/Conditional_Enemy/Confusion": {
+    "title": {
+      "zh": "普攻(对敌人)：混乱",
+      "en": "Basic Attack (on Enemy): Confusion"
+    },
+    "desc": {
+      "zh": "当普攻目标是敌人时，为其施加混乱。参考值：2.0, 3.0。",
+      "en": "When the basic attack target is an enemy, apply Confusion. Seen values: 2.0, 3.0."
+    },
+    "type": "number",
+    "defaultValue": 2
+  },
+  "AddStatusToBasicAttack/Conditional_Enemy/Stun": {
+    "title": {
+      "zh": "普攻(对敌人)：眩晕（几率）",
+      "en": "Basic Attack (on Enemy): Stun (Chance)"
+    },
+    "desc": {
+      "zh": "当普攻目标是敌人时，有几率施加眩晕。可以是一个[层数, 几率]的数组。参考值：[1.0, 0.5]。",
+      "en": "When the basic attack target is an enemy, chance to apply Stun. Can be a [stacks, chance] array. Seen value: [1.0, 0.5]."
+    },
+    "type": "string",
+    "defaultValue": "[1.0, 0.5]"
+  },
+  "AddStatusToBasicAttack/Conditional_Ally/Shield": {
+    "title": {
+      "zh": "普攻(对友军)：护盾",
+      "en": "Basic Attack (on Ally): Shield"
+    },
+    "desc": {
+      "zh": "当普攻目标是友军时，为其提供护盾。参考值：2.0, 3.0。",
+      "en": "When the basic attack target is an ally, grant them a shield. Seen values: 2.0, 3.0."
+    },
+    "type": "number",
+    "defaultValue": 2
+  },
+  "LowHealthAllyDodgeChanceAura/theshold": {
+    "title": {
+      "zh": "低血量友军闪避光环：阈值",
+      "en": "Low Health Ally Dodge Aura: Threshold"
+    },
+    "desc": {
+      "zh": "友军生命值低于此数值时，会获得闪避加成。参考值：5.0。",
+      "en": "Allies below this health value gain a dodge bonus. Seen value: 5.0."
+    },
+    "type": "number",
+    "defaultValue": 5
+  },
+  "LowHealthAllyDodgeChanceAura/chance": {
+    "title": {
+      "zh": "低血量友军闪避光环：几率",
+      "en": "Low Health Ally Dodge Aura: Chance"
+    },
+    "desc": {
+      "zh": "为低血量友军提供的闪避几率。输入一个带%的字符串。参考值：'50%'。",
+      "en": "Dodge chance provided to low-health allies. Input as a string with '%'. Seen value: '50%'."
+    },
+    "type": "string",
+    "defaultValue": "50%"
+  },
+  "AutocastEachRound/ability": {
+    "title": {
+      "zh": "每轮自动施法：能力",
+      "en": "Autocast Each Round: Ability"
+    },
+    "desc": {
+      "zh": "每轮结束时自动施放的能力ID。参考值：'MedicObey', 'MedicObey2'。",
+      "en": "The ID of the ability to autocast at the end of each round. Seen values: 'MedicObey', 'MedicObey2'."
+    },
+    "type": "string",
+    "defaultValue": "MedicObey"
+  },
+  "AutocastEachRound/force_display_name": {
+    "title": {
+      "zh": "每轮自动施法：强制显示名称",
+      "en": "Autocast Each Round: Force Display Name"
+    },
+    "desc": {
+      "zh": "是否在界面上强制显示该自动施法能力的名称。通常设置为 true。",
+      "en": "Whether to force display the name of this autocast ability in the UI. Usually set to true."
+    },
+    "type": "string",
+    "defaultValue": "true"
+  },
+  "TrinketPassiveMultiplierBonus": {
+    "title": {
+      "zh": "饰品被动效果倍率",
+      "en": "Trinket Passive Multiplier Bonus"
+    },
+    "desc": {
+      "zh": "为你装备的饰品的被动效果提供一个额外的乘数。1.0代表效果翻倍。参考值：1.0, 2.0。",
+      "en": "Provides an additional multiplier for the passive effects of your equipped trinket. 1.0 means double effect. Seen values: 1.0, 2.0."
+    },
+    "type": "number",
+    "defaultValue": 1
+  },
+  "TrinketActiveEffectsMultiplierBonus": {
+    "title": {
+      "zh": "饰品主动效果倍率",
+      "en": "Trinket Active Effects Multiplier Bonus"
+    },
+    "desc": {
+      "zh": "为你装备的饰品的主动效果提供一个额外的乘数。1.0代表效果翻倍。参考值：1.0, 2.0。",
+      "en": "Provides an additional multiplier for the active effects of your equipped trinket. 1.0 means double effect. Seen values: 1.0, 2.0."
+    },
+    "type": "number",
+    "defaultValue": 1
+  },
+  "PassiveUntilCastSpell/HealAlliesEachTurn/stacks": {
+    "title": {
+      "zh": "施法前祝福：每回合治疗量",
+      "en": "Pre-Cast Blessing: Heal per Turn"
+    },
+    "desc": {
+      "zh": "在施法前，每回合为友军恢复的生命值。参考值：2.0, 3.0。",
+      "en": "Health restored to allies each turn before casting a spell. Seen values: 2.0, 3.0."
+    },
+    "type": "number",
+    "defaultValue": 2
+  },
+  "PassiveUntilCastSpell/HealAlliesEachTurn/mana": {
+    "title": {
+      "zh": "施法前祝福：每回合回蓝",
+      "en": "Pre-Cast Blessing: Mana per Turn"
+    },
+    "desc": {
+      "zh": "在施法前，每回合为友军恢复的法力值。参考值：2.0, 3.0。",
+      "en": "Mana restored to allies each turn before casting a spell. Seen values: 2.0, 3.0."
+    },
+    "type": "number",
+    "defaultValue": 2
+  },
+  "PassiveUntilCastSpell/StatusAlliesEachTurn/RandomStatUp": {
+    "title": {
+      "zh": "施法前祝福：友军随机属性",
+      "en": "Pre-Cast Blessing: Ally Random Stat"
+    },
+    "desc": {
+      "zh": "在施法前，每回合为友军提供的随机属性点数。参考值：3.0。",
+      "en": "Random stat points granted to allies each turn before casting a spell. Seen value: 3.0."
+    },
+    "type": "number",
+    "defaultValue": 3
+  }
+}
