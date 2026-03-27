@@ -2,7 +2,7 @@
   "$schema": "https://schema.tauri.app/config/2",
   "productName": "mewgenics-mod-editor",
   "version": "0.1.4",
-  "identifier": "com.kise.mewgenics-mod-editor",
+  "identifier": "com.isekk.mewgenics-mod-editor",
   "build": {
     "beforeDevCommand": "pnpm dev",
     "devUrl": "http://localhost:1420",
