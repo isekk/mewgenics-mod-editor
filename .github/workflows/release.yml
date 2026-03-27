@@ -55,3 +55,16 @@ jobs:
           releaseBody: "See the assets below to download the Windows installer."
           releaseDraft: true
           prerelease: false
+      # --- 绿色版 EXE ---
+      - name: Upload Green Portable EXE
+        shell: pwsh
+        run: |
+          $exePath = "src-tauri/target/release/mewgenics-mod-editor.exe"
+          if (Test-Path $exePath) {
+            Copy-Item $exePath "mewgenics-mod-editor_Portable_x64.exe"
+            gh release upload ${{ github.ref_name }} "mewgenics-mod-editor_Portable_x64.exe"
+          } else {
+            Write-Error "找不到原始 EXE 文件，路径可能不正确"
+          }
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
